@@ -1,0 +1,335 @@
+/* 
+ * File:   defines.h
+ * Author: Fernando.Fernandes
+ *
+ * Created on August 19, 2022, 3:32 PM
+ */
+
+#ifndef DEFINES_H
+#define	DEFINES_H
+
+#ifdef	__cplusplus
+extern "C" {
+#endif
+    
+// Defines /////////////////////////////////////////////////////////////////////    
+
+// Digital Pins    
+#define def_CanMode             RA4
+#define def_WDT_In              RA5
+#define def_3v3AuxPower         RC0
+#define def_IO_Interrupt        RC5    
+#define def_HeadLight           RB5
+    
+#define def_IO_6vAuxPower       0
+#define def_IO_TailLight        1
+#define def_IO_MotorA           2
+#define def_IO_MotorB           3
+#define def_IO_AccelInt1        4
+#define def_IO_AccelInt2        5     
+#define def_IO_HallViolation    6       
+#define def_IO_HallDock         7 
+    
+// Analog Pins
+#define def_HallRightIn         0
+#define def_HallRightOut        1
+#define def_HallLeftIn          2 
+#define def_HallLeftOut         3   
+
+// TIMES ///////////////////////////////////////////////////////////////////////
+#define def_TimerBase100ms                  100 
+
+#define def_TimeSelftest                    100     //*100
+#define def_TimeSelftestRelease             40      //*100        
+    
+#define def_Time_AlarmDebounce              600     //*100   
+#define def_Time_RandomNumber               600     //*100    
+    
+// RFID 
+#define def_TimeRfidUartTimeout             5       //*10
+#define def_TimeRfidEraseTag                50      //*10
+#define def_TimeRfidReadTimeout             20      //*100
+    
+// POLLING SENSORS    
+#define def_Time_PollingHall_Unlock         20      //*100
+#define def_Time_PollingHall_Pause          20      //*100
+#define def_Time_PollingHall_Lock           100     //*100
+#define def_Time_PollingHall_WaitRelease    20      //*100
+
+#define def_Time_PollingRFID_Unlock         100     //*100
+#define def_Time_PollingRFID_Pause          600     //*100
+#define def_Time_PollingRFID_Lock           600     //*100
+#define def_Time_PollingRFID_WaitRelease    20      //*100
+
+// CAN    
+#define def_Time_CanMessageAlarm            20      //*100 
+#define def_Time_CanMessageFail             20      //*100     
+#define def_Time_CanMessageStatus           10      //*100   
+#define def_Time_CanMessageTAG              20      //*100
+#define def_Time_CanMessageBeat            100      //*100 
+    
+// ACCELEROMETER
+#define def_TimeAccelKnoc                   100     //*100 
+#define def_TimePollingAccel                10      //*100    
+    
+//BIKE CONFIG
+#define def_TimeoutMotor                    20      //*100    
+#define def_Time_AfterRelease               50      //*100                 
+    
+// GENERAL /////////////////////////////////////////////////////////////////////
+#define def_ADC_Samples             10
+
+#define def_HallThreshold           2048  
+
+#define def_AccelKnocs              3  
+#define def_RFIDTagReads            3     
+#define def_BufferRxUart1Size       10
+    
+#define PWM_FullScale               4000
+#define PWM_Step                    ((float)100 / PWM_FullScale) 
+
+// Power MASK //////////////////////////////////////////////////////////////////   
+#define Mask_Power_HALL             0x01
+#define Mask_Power_HeadLight        0x02    
+#define Mask_Power_RFID             0x04
+#define Mask_Power_Accel            0x08
+#define Mask_Power_TailLight        0x10
+#define Mask_Power_Buzzer           0x20
+#define Mask_Power_Motor            0x40
+#define Mask_Power_UnlockPauseMode  0x80    
+    
+// ALARM MASK //////////////////////////////////////////////////////////////////  
+#define Mask_AlarmAccel             0x01     
+#define Mask_AlarmUndock            0x02
+#define Mask_AlarmBikeVioled        0x04
+#define Mask_AlarmPinsVioled        0x08
+    
+// FAIL MASK ///////////////////////////////////////////////////////////////////   
+#define Mask_FailLockVioled         0x0001
+#define Mask_FailDockHall           0x0002 
+#define Mask_FailHeadLight          0x0004
+#define Mask_FailRfidReader         0x0008    
+#define Mask_FailRightPinClose      0x0010    
+#define Mask_FailRightPinOpen       0x0020      
+#define Mask_FailLeftPinClose       0x0040
+#define Mask_FailLeftPinOpen        0x0080
+#define Mask_FailAccelerometer      0x4000     
+#define Mask_FailMotor              0x8000    
+    
+// CAN DEFINES /////////////////////////////////////////////////////////////////
+// Send IDS    
+#define Can_Source                  0b10110    
+#define Can_TargetPublic            0b11111
+#define Can_InstructionWarning      0b111    
+#define Can_IndexFails              0x17
+#define Can_IndexAlarms             0x18
+#define Can_SubIndexFaultGeneral    0x01
+#define Can_SubIndexFaultInopIfStop 0x04     
+#define Can_SubIndexAlarmLow        0x03  
+#define Can_SubIndexAlarmCritical   0x05   
+   
+const uint32_t CanID_Alarm = ((uint32_t)Can_Source             << 24 |  
+                              (uint32_t)Can_TargetPublic       << 19 |  
+                              (uint32_t)Can_InstructionWarning << 16 |  
+                              (uint32_t)Can_IndexAlarms        << 8  |  
+                              (uint32_t)Can_SubIndexAlarmCritical);    
+
+const uint32_t CanID_Fail = ((uint32_t)Can_Source             << 24 |  
+                             (uint32_t)Can_TargetPublic       << 19 |  
+                             (uint32_t)Can_InstructionWarning << 16 |  
+                             (uint32_t)Can_IndexFails         << 8  |  
+                             (uint32_t)Can_SubIndexFaultInopIfStop);    
+
+const uint32_t CanID_Beat =         0x16F83000;
+const uint32_t CanID_Status =       0x16F85000;
+const uint32_t CanID_RfidTag =      0x16F85001;
+
+// Received IDS
+#define def_CanID_IotStatus         0x09F85300    
+#define def_CanID_Config1           0x09B05002
+#define def_CanID_Config2           0x09B05003   
+#define def_CanID_Config3           0x09B05004 
+#define def_CanID_LockControl       0x09B05005 
+#define def_CanID_LockSelftest      0x09B05006
+    
+#define def_CanID_IhmStatus         0x03F85200
+    
+// Message config
+#define def_CANMessageUnlock        0x01
+#define def_CanMessageUnlockKey     0xAA55AA55    
+
+#define def_CanMessageEnSelftest    0x01  
+#define def_CanMessageDisSelftest   0x00  
+
+// DEFAULT BIKE CONFIG /////////////////////////////////////////////////////////
+#define Default_IOT_Mode            Enum_IotModeLock 
+#define Default_LOCK_ModeCurrent    Enum_LockModeUnlock 
+#define Default_LOCK_ModeNew        Enum_LockModeLock
+#define Default_Day_State           Enum_LDR_Day    
+#define Default_HEAD_Power          50     //(%)    
+#define Default_HEAD_BlinkON        3      //*100ms         
+#define Default_HEAD_BlinkOFF       3    
+#define Default_TAIL_BlinkON        3
+#define Default_TAIL_BlinkOFF       3    
+#define Default_Light_PauseON       2      //*100ms
+#define Default_Light_PauseOFF      28   
+#define Default_TIME_ALARM          600   
+#define Default_TIME_Release        150    //*100ms      
+#define Default_ACCEL_Threshold     30    
+        
+// STRUCTS ///////////////////////////////////////////////////////////////////// 
+    
+typedef struct
+{
+    bool DockSensor;
+    bool ViolationSensor;   
+    
+    uint16_t Hall_RightOut;
+    uint16_t Hall_RightIn;
+    uint16_t Hall_LeftOut;
+    uint16_t Hall_LeftIn;    
+    
+}Hall_MeasuresTypedef;
+
+typedef struct
+{
+    uint16_t Time_CanMessageAlarm;
+    uint16_t Time_CanMessageFail;
+    
+    uint16_t Time_CanMessageTAG;
+    uint16_t Time_CanMessageStatus;
+    
+    uint16_t Time_CanMessageBeat;
+    uint32_t MessageCount;    
+    
+}CAN_MSG_ControlTypedef;
+
+typedef struct
+{    
+    bool AccelerometerFail;
+    
+    bool Hall_BikeDocked;
+    bool Hall_BikeVioled;    
+    
+    uint8_t LockState; 
+    uint8_t LockLastCommand;
+    
+    uint8_t MotorState;    
+    uint8_t PinLeftStatus;
+    uint8_t PinRightStatus;    
+    
+}Bike_StatusTypedef;
+
+typedef struct
+{
+    uint8_t IotMode;
+    
+    uint8_t LockModeNew;
+    uint8_t LockModeCurrent;        
+    uint32_t RandomNumber;
+    
+    uint8_t Day_State;
+    
+    uint16_t HEAD_Power;     
+    uint16_t HEAD_BlinkON;
+    uint16_t HEAD_BlinkOFF;
+    
+    uint16_t TAIL_BlinkON;
+    uint16_t TAIL_BlinkOFF;
+    
+    uint16_t Light_PauseON;
+    uint16_t Light_PauseOFF;    
+    
+    uint16_t TIME_ALARM;
+    uint16_t TIME_Release;
+
+    uint8_t ACCEL_Threshold;    
+
+}Bike_ConfigTypedef;
+
+// ENUMS ///////////////////////////////////////////////////////////////////////    
+    
+enum EEPROM_Table
+{
+    // Hall MEMORY  
+    EEPROM_HALL_ViolationState,
+    EEPROM_HALL_DockState,     
+    
+    // LEFT
+    EEPROM_HALL_LeftCloseOut_H,
+    EEPROM_HALL_LeftCloseOut_L,
+    EEPROM_HALL_LeftOpenIn_H,
+    EEPROM_HALL_LeftOpenIn_L, 
+   
+    // RIGHT    
+    EEPROM_HALL_RightCloseOut_H,
+    EEPROM_HALL_RightCloseOut_L,
+    EEPROM_HALL_RightOpenIn_H,       
+    EEPROM_HALL_RightOpenIn_L,    
+};
+
+enum LockState_Table
+{
+    Enum_LockStateOpen = 1,
+    Enum_LockStateClose,
+    Enum_LockStateIndefined,
+};
+
+enum LockCommand_Table
+{
+    Enum_LockCommandOpen = 1,
+    Enum_LockCommandClose,
+};
+
+enum MotorState_Table
+{
+    Enum_MotorIdle = 1,
+    Enum_MotorOpening, 
+    Enum_MotorClosing,     
+    Enum_MotorTimeout,
+};
+
+enum PinsState_Table
+{
+    Enum_PinsState_Close = 1,
+    Enum_PinsState_Open, 
+    Enum_PinsState_Error,
+};
+
+enum ActNextAct_Table
+{
+    Enum_ActIdle = 1,
+    Enum_ActOpenLock,
+    Enum_ActCloseLock,    
+};
+
+enum LockMode_Table
+{    
+    Enum_LockModeLock = 1,
+    Enum_LockModePause,
+    Enum_LockModeWaitRelease,    
+    Enum_LockModeUnlock,
+    Enum_LockModeSelftest,
+};
+
+enum IotBikeMode_Table
+{    
+    Enum_IotModePlay = 1,
+    Enum_IotModeLock,
+    Enum_IotModePause,
+    Enum_IotModeInoperative,
+    Enum_IotModeTransport,    
+};
+
+enum LDRState_Table
+{
+    Enum_LDR_Day = 1,
+    Enum_LDR_Night,        
+};
+
+#ifdef	__cplusplus
+}
+#endif
+
+#endif	/* DEFINES_H */
+
