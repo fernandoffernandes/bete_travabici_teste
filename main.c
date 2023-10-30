@@ -60,6 +60,8 @@ void fx_led_green_fast(void);
 void fx_led_green_slow(void);
 
 void fx_read_adc(void);
+bool fx_read_button(void);
+void fx_led_show_fail(uint8_t fail_code);
 
 // Macros ////////////////////////////////////////////////////
 #define POWER_SUPPLY_LOW_ON     IO_RC0_SetLow()
@@ -68,19 +70,19 @@ void fx_read_adc(void);
 #define POWER_SUPPLY_HIGH_ON    IO_ResetPin(&g_io_expander1, IO_6V_AUX_POWER)
 #define POWER_SUPPLY_HIGH_OFF   IO_SetPin(&g_io_expander1, IO_6V_AUX_POWER)
 
-#define LED_GREEN_ON            IO_RA2_SetHigh()
-#define LED_GREEN_OFF           IO_RA2_SetLow()
+#define LED_GREEN_ON            IO_RA2_SetLow()
+#define LED_GREEN_OFF           IO_RA2_SetHigh()
 #define LED_GREEN_BLINK         IO_RA2_Toggle()
 
-#define LED_RED_ON              IO_RA3_SetHigh()
-#define LED_RED_OFF             IO_RA3_SetLow()
+#define LED_RED_ON              IO_RA3_SetLow()
+#define LED_RED_OFF             IO_RA3_SetHigh()
 #define LED_RED_BLINK           IO_RA3_Toggle()
 
-#define RELAY_POSITIVE_ON       IO_RA3_SetHigh()
-#define RELAY_POSITIVE_OFF      IO_RA3_SetLow()
+#define RELAY_POSITIVE_ON       IO_SetPin(&g_io_expander1, 1)
+#define RELAY_POSITIVE_OFF      IO_ResetPin(&g_io_expander1, 1)
 
-#define RELAY_NEGATIVE_ON       IO_RA3_SetHigh()
-#define RELAY_NEGATIVE_OFF      IO_RA3_SetLow()
+#define RELAY_NEGATIVE_ON       IO_RC5_SetHigh()
+#define RELAY_NEGATIVE_OFF      IO_RC5_SetLow()
 
 // Variables /////////////////////////////////////////////////
 // Structs
@@ -102,9 +104,11 @@ bool g_flag_timer_1s = false;
 bool g_flag_timer_100ms = false;
 
 // General 
+uint8_t g_fail_code = 0;
+uint8_t g_state_machine = 0;
+
 uint16_t g_adc_1 = 0;
 uint16_t g_adc_2 = 0;
-uint16_t g_fail_code = 0;
 
 // Times
 uint16_t g_wait_time = 0;
@@ -139,7 +143,12 @@ void main(void)
         
         if(flag_debug != g_flag_timer_1s)
         {
-            flag_debug = g_flag_timer_1s;             
+            flag_debug = g_flag_timer_1s;        
+            
+            printf("state machine %d \r\n", g_state_machine); 
+            
+            fx_read_adc();
+            printf("adc1=%d, adc2=%d \r\n", g_adc_1, g_adc_2);            
         }      
     }
 }
@@ -147,31 +156,18 @@ void main(void)
 // Control Functions ////////////////////////////////////////////////////
 void control_system(void)
 {
-    static uint8_t state_machine = 0;
-    
-    switch (state_machine)
+    switch (g_state_machine)
     {
         // Wait button        
         case ENUM_STAGE_1:
         {
+            LED_RED_OFF;
             fx_led_green_slow();
             
-            // Read button
-            static uint16_t counter = 0;        
-        
-            if(0 != g_lock_status.random_number)
+            if(true == fx_read_button())
             {
-                if(false == IO_RA5_GetValue())
-                {
-                    if(counter > 100)
-                        state_machine++;
-                    else
-                        counter++;                        
-                }
-                else
-                {
-                    counter = 0; 
-                }            
+                g_state_machine++;
+                printf("Button detected \r\n");
             }
         }
         break; 
@@ -179,13 +175,17 @@ void control_system(void)
         // Check frame connection        
         case ENUM_STAGE_2:
         {
-            if(false == IO_RA5_GetValue())
+            if(false == IO_RC3_GetValue())
             {
-                state_machine++;                
+                printf("Frame connected \r\n");                
+                g_state_machine++;                
             }
             else
             {
-                g_fail_code = 2;                
+                printf("Frame not connected \r\n");                
+                
+                g_fail_code = ENUM_FAIL_FRAME_CONNECTION;                
+                g_state_machine = ENUM_STAGE_FAIL;                
             }            
         }
         break;
@@ -193,11 +193,11 @@ void control_system(void)
         // Turn on relay        
         case ENUM_STAGE_3:
         {
-            // Turn_on relay            
-            g_wait_time = 10;           //*100ms                                  
-            state_machine++;            
+            printf("Relay positive powered \r\n");
+            RELAY_POSITIVE_ON;
             
-            RELAY_POSITIVE_ON; 
+            g_wait_time = 15;           //*100ms                                  
+            g_state_machine++;              
         }
         break;
         
@@ -211,15 +211,18 @@ void control_system(void)
             {
                 fx_read_adc();                
                 
-                if((g_adc_1 > MIN_VOLTAGE_OPEN_CIRCUIT) || 
+                if((g_adc_1 > MIN_VOLTAGE_OPEN_CIRCUIT) && 
                    (g_adc_2 > MIN_VOLTAGE_OPEN_CIRCUIT))
                 {
-                    state_machine++;                    
+                    printf("Short circuit not detected \r\n");
+                    g_state_machine++;                    
                 }
                 else
                 {
-                    g_fail_code = 5;
-                    state_machine = ENUM_STAGE_FAIL;                    
+                    printf("Short circuit with frame detected \r\n");
+                    
+                    g_fail_code = ENUM_FAIL_SHORT_FRAME;
+                    g_state_machine = ENUM_STAGE_FAIL;                    
                 }                
             }            
         }
@@ -228,10 +231,11 @@ void control_system(void)
         // Turn on relay
         case ENUM_STAGE_5:
         {
+            printf("Relay negative powered \r\n");            
             RELAY_NEGATIVE_ON; 
             
             g_wait_time = 100;                                   
-            state_machine++;            
+            g_state_machine++;            
         }
         break;         
         
@@ -244,15 +248,18 @@ void control_system(void)
             {
                 fx_read_adc();                
                 
-                if((g_adc_1 < MAX_VOLTAGE_CLOSE_CIRCUIT) || 
+                if((g_adc_1 < MAX_VOLTAGE_CLOSE_CIRCUIT) && 
                    (g_adc_2 < MAX_VOLTAGE_CLOSE_CIRCUIT))
                 {
-                    state_machine++;                    
+                    printf("Contact voltage OK!! \r\n");
+                    g_state_machine++;                    
                 }
                 else
                 {
-                    g_wait_time = 50;
-                    state_machine = ENUM_STAGE_FAIL;
+                    printf("Contact voltage high detected \r\n");
+                    
+                    g_fail_code = ENUM_FAIL_HIGH_VOLTAGE;
+                    g_state_machine = ENUM_STAGE_FAIL;
                 }                
             }     
         }
@@ -260,11 +267,13 @@ void control_system(void)
         
         case ENUM_STAGE_7:
         {
+            printf("Relays OFF \r\n");
+            
             g_wait_time = 50;            
             RELAY_POSITIVE_OFF;
             RELAY_NEGATIVE_OFF;
             
-            state_machine = ENUM_STAGE_SUCESS;        
+            g_state_machine = ENUM_STAGE_SUCESS;        
         }
         break;   
         
@@ -277,24 +286,43 @@ void control_system(void)
             {
                 LED_RED_OFF;
                 LED_GREEN_OFF;
-                state_machine = ENUM_STAGE_1;
+                g_state_machine = ENUM_STAGE_1;
             }            
         }
         break;
 
         case ENUM_STAGE_FAIL:
         {
-            LED_RED_ON;
-            LED_GREEN_OFF;
+            static bool flag_fail = false;
             
-            if(0 == g_wait_time)
+            if(false == flag_fail)
             {
-                LED_RED_OFF;
-                LED_GREEN_OFF;
-                state_machine = ENUM_STAGE_1;
+                flag_fail = true;
+                
+                LED_GREEN_OFF;            
+                RELAY_POSITIVE_OFF;
+                RELAY_NEGATIVE_OFF;                
+                fx_led_show_fail(0);                
+            }            
+            
+            fx_led_show_fail(g_fail_code);
+            
+            if(true == fx_read_button())
+            {
+                flag_fail = false;
+                g_state_machine = ENUM_STAGE_WAIT_BT;                
+            }
+        }
+        break;
+        
+        case ENUM_STAGE_WAIT_BT:
+        {
+            if(false == fx_read_button())
+            {
+                g_state_machine = ENUM_STAGE_1;                
             }            
         }
-        break;        
+        break;
     }    
 }
 
@@ -359,6 +387,36 @@ void fx_read_adc(void)
     g_adc_2 = adc_2 / ADC_SAMPLES;    
 }
 
+bool fx_read_button(void)
+{
+    static bool button_pressed = false;
+    static uint16_t counter = 0;    
+    
+    if(false == IO_RC4_GetValue())
+    {
+        if(counter > 100)
+        {
+            button_pressed = true;            
+        }            
+        else
+        {
+            counter++; 
+        }                                   
+    }
+    else
+    {
+        counter = 0; 
+    
+        if(true == button_pressed)
+        {
+            button_pressed = false;            
+            return true; 
+        }                
+    }    
+    
+    return false;    
+}
+
 void fx_led_green_fast(void)
 {
     static bool flag_led = false;
@@ -384,9 +442,9 @@ void fx_led_green_slow(void)
 void fx_led_show_fail(uint8_t fail_code)
 {
     // DEFINES /////////////////////////////////////////////////////////////////
-    #define TIME_FAIL_LED_ON        3          //*100ms   
-    #define TIME_FAIL_LED_OFF       3          //*100ms
-    #define TIME_FAIL_NEXT_CODE     20         //*100ms
+    #define TIME_FAIL_LED_ON        10         //*100ms   
+    #define TIME_FAIL_LED_OFF       10         //*100ms
+    #define TIME_FAIL_NEXT_CODE     30         //*100ms 
     
     // VARIABLES ///////////////////////////////////////////////////////////////    
     static bool flag_led = false;
@@ -396,32 +454,41 @@ void fx_led_show_fail(uint8_t fail_code)
     static uint16_t blink_counter = 0;    
     
     // LOGIC ///////////////////////////////////////////////////////////////////    
+    // Control reset 
+    if(0 == fail_code)
+    {
+        flag_led = false;
+        
+        time_led = 0;        
+        blink_counter = 0;
+        
+        return;
+    }    
+    
     // Control time
     if(flag_time != g_flag_timer_100ms)
     {
-        time_led--;        
+        flag_time = g_flag_timer_100ms;        
+        
+        if(time_led)
+            time_led--;        
     }
         
     // Control Led    
-    if(false = flag_led)
-    {
-        if(0 == time_led)
+    if(0 == time_led)
+    {     
+        flag_led = !flag_led;        
+        
+        if(false == flag_led)
         {
-            flag_led = !flag_led;
-            
             LED_RED_ON;
             blink_counter++;
-            time_led = TIME_FAIL_LED_ON;            
-        }        
-    }
-    else
-    {
-        if(0 == time_led)
+            time_led = TIME_FAIL_LED_ON;        
+        }
+        else
         {
-            flag_led = !flag_led;
-            
             LED_RED_OFF;    
-            
+
             if(blink_counter < fail_code)
             {
                 time_led = TIME_FAIL_LED_OFF;                                
@@ -431,7 +498,7 @@ void fx_led_show_fail(uint8_t fail_code)
                 blink_counter = 0;
                 time_led = TIME_FAIL_NEXT_CODE;
             }
-        }        
+        }    
     }
 }
 
@@ -442,17 +509,21 @@ void fx_system_start(void)
     printf("Start System - EEPROM \r\n");
     
     printf("Start System - IO Expander \r\n");
-    IO_ConfigPorts(&g_io_expander1, 0xF0); 
+    IO_ConfigPorts(&g_io_expander1, 0x00); 
     
     printf("Start System - Reloading Default Values \r\n");
     
     printf("Start System - Starting Pins \r\n");
+    LED_RED_OFF;
+    LED_GREEN_OFF;
+    RELAY_NEGATIVE_OFF;
+    RELAY_POSITIVE_OFF;
     
-    printf("Start System - Starting Motor / PS \r\n");
+    printf("Start System - Starting PS / PS \r\n");
     POWER_SUPPLY_LOW_ON;
-    POWER_SUPPLY_HIGH_ON;     
+    POWER_SUPPLY_HIGH_ON;    
     
-    printf("Start System - Finished \r\n");
+    printf("Start System - Finished \r\n");    
 }
 
 /**

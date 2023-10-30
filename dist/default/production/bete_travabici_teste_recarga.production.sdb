@@ -3,22 +3,22 @@
 [d edition pro ]
 [d chip 18F26K83 ]
 [d frameptr 16353 ]
-"69 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/examples/i2c1_master_example.c
-[e E355 . `uc
+"69 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/examples/i2c1_master_example.c
+[e E358 . `uc
 I2C1_NOERR 0
 I2C1_BUSY 1
 I2C1_FAIL 2
 ]
 "70
-[e E360 . `uc
+[e E363 . `uc
 I2C1_STOP 1
 I2C1_RESTART_READ 2
 I2C1_RESTART_WRITE 3
 I2C1_CONTINUE 4
 I2C1_RESET_LINK 5
 ]
-"113 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/adcc.c
-[e E22576 . `uc
+"113 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/adcc.c
+[e E22586 . `uc
 channel_ANA0 0
 channel_ANA1 1
 channel_ANA7 7
@@ -28,8 +28,8 @@ channel_DAC1 61
 channel_FVR_Buffer1 62
 channel_FVR_Buffer2 63
 ]
-"159 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/i2c1_master.c
-[e E22964 . `uc
+"159 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/i2c1_master.c
+[e E22977 . `uc
 I2C1_IDLE 0
 I2C1_SEND_ADR_READ 1
 I2C1_SEND_ADR_WRITE 2
@@ -51,20 +51,20 @@ I2C1_BUS_COLLISION 17
 I2C1_BUS_ERROR 18
 ]
 "181
-[e E360 . `uc
+[e E363 . `uc
 I2C1_STOP 1
 I2C1_RESTART_READ 2
 I2C1_RESTART_WRITE 3
 I2C1_CONTINUE 4
 I2C1_RESET_LINK 5
 ]
-[e E355 . `uc
+[e E358 . `uc
 I2C1_NOERR 0
 I2C1_BUSY 1
 I2C1_FAIL 2
 ]
 "219
-[e E22985 . `uc
+[e E22998 . `uc
 I2C1_DATA_COMPLETE 0
 I2C1_WRITE_COLLISION 1
 I2C1_ADDR_NACK 2
@@ -72,8 +72,8 @@ I2C1_DATA_NACK 3
 I2C1_TIMEOUT 4
 I2C1_NULL 5
 ]
-"88 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/tmr2.c
-[e E22574 . `uc
+"88 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/tmr2.c
+[e E22584 . `uc
 TMR2_ROP_STARTS_TMRON 0
 TMR2_ROP_STARTS_TMRON_ERSHIGH 1
 TMR2_ROP_STARTS_TMRON_ERSLOW 2
@@ -97,7 +97,7 @@ TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
 TMR2_MS_STARTS_TMRON_ERSBOTHEDGE 19
 ]
 "94
-[e E22597 . `uc
+[e E22607 . `uc
 TMR2_T2INPPS 0
 TMR2_RESERVED 1
 TMR2_T4POSTSCALED 2
@@ -124,19 +124,27 @@ TMR2_UART1_TX_EDGE 22
 TMR2_UART2_RX_EDGE 23
 TMR2_UART2_TX_EDGE 24
 ]
-"166 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\main.c
-[e E23304 TestState_Table `uc
+"187 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\main.c
+[e E23322 Fail_Table `uc
+ENUM_FAIL_FRAME_CONNECTION 2
+ENUM_FAIL_SHORT_FRAME 3
+ENUM_FAIL_HIGH_VOLTAGE 4
+]
+"188
+[e E23311 TestState_Table `uc
 ENUM_STAGE_1 0
 ENUM_STAGE_2 1
 ENUM_STAGE_3 2
 ENUM_STAGE_4 3
 ENUM_STAGE_5 4
 ENUM_STAGE_6 5
-ENUM_STAGE_SUCESS 6
-ENUM_STAGE_FAIL 7
+ENUM_STAGE_7 6
+ENUM_STAGE_SUCESS 7
+ENUM_STAGE_FAIL 8
+ENUM_STAGE_WAIT_BT 9
 ]
-"335
-[e E22969 . `uc
+"382
+[e E22982 . `uc
 channel_ANA0 0
 channel_ANA1 1
 channel_ANA7 7
@@ -146,111 +154,113 @@ channel_DAC1 61
 channel_FVR_Buffer1 62
 channel_FVR_Buffer2 63
 ]
-"19 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\header_files/tca9534.c
-[e E22997 . `uc
+"19 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\header_files/tca9534.c
+[e E23010 . `uc
 IO_REG_INPUT 0
 IO_REG_OUTPUT 1
 IO_REG_POLARITY_REGISTER 2
 IO_REG_CONFIG 3
 ]
-"1 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\abs.c
+"1 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\abs.c
 [v _abs abs `(i  1 e 2 0 ]
-"9 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-[v ___aodiv __aodiv `(o  1 e 8 0 ]
-"9 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-[v ___aomod __aomod `(o  1 e 8 0 ]
-"133 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\doprnt.c
-[v _pad pad `(v  1 s 1 pad ]
-"443
-[v _dtoa dtoa `(v  1 s 1 dtoa ]
-"1007
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"1177 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\doprnt.c
 [v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
-"1520
+"1817
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
+"4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
-"62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\float.c
+"62 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\float.c
 [v ___ftpack __ftpack `(f  1 e 4 0 ]
-"86 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftadd.c
+"86 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 4 0 ]
-"54 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftdiv.c
+"54 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 4 0 ]
-"62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftmul.c
+"62 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
-"19 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftsub.c
+"19 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
-"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_fputc.c
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
-"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_fputs.c
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_fputs.c
 [v _fputs fputs `(i  1 e 2 0 ]
-"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\printf.c
+"5 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
-"10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
+"10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
 [v ___flsub __flsub `(d  1 e 4 0 ]
-"11 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
+"11 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
-"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul32.c
+"15 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"91 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul64.c
+"91 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"11 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\header_files/tca9534.c
+"11 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\header_files/tca9534.c
 [v _IO_ConfigPorts IO_ConfigPorts `(v  1 e 1 0 ]
+"28
+[v _IO_SetPin IO_SetPin `(v  1 e 1 0 ]
 "42
 [v _IO_ResetPin IO_ResetPin `(v  1 e 1 0 ]
-"116 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\main.c
+"119 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\main.c
 [v _main main `(v  1 e 1 0 ]
-"148
+"157
 [v _control_system control_system `(v  1 e 1 0 ]
-"282
+"329
 [v _control_wdt control_wdt `(v  1 e 1 0 ]
-"300
+"347
 [v _fx_eeprom_read_int16 fx_eeprom_read_int16 `(us  1 e 2 0 ]
-"316
+"363
 [v _fx_eeprom_write_int16 fx_eeprom_write_int16 `(v  1 e 1 0 ]
-"328
+"375
 [v _fx_read_adc fx_read_adc `(v  1 e 1 0 ]
-"343
+"390
+[v _fx_read_button fx_read_button `(a  1 e 1 0 ]
+"420
 [v _fx_led_green_fast fx_led_green_fast `(v  1 e 1 0 ]
-"354
+"431
 [v _fx_led_green_slow fx_led_green_slow `(v  1 e 1 0 ]
-"365
+"442
+[v _fx_led_show_fail fx_led_show_fail `(v  1 e 1 0 ]
+"505
 [v _fx_system_start fx_system_start `(v  1 e 1 0 ]
-"62 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/adcc.c
+"62 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
 "137
 [v _ADCC_GetSingleConversion ADCC_GetSingleConversion `(us  1 e 2 0 ]
-"63 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/examples/i2c1_master_example.c
+"63 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/examples/i2c1_master_example.c
 [v _I2C1_Read1ByteRegister I2C1_Read1ByteRegister `(uc  1 e 1 0 ]
 "99
 [v _I2C1_Write1ByteRegister I2C1_Write1ByteRegister `(v  1 e 1 0 ]
 "170
-[v _rd1RegCompleteHandler rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
+[v _rd1RegCompleteHandler rd1RegCompleteHandler `(E363  1 s 1 rd1RegCompleteHandler ]
 "177
-[v _rd2RegCompleteHandler rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
+[v _rd2RegCompleteHandler rd2RegCompleteHandler `(E363  1 s 1 rd2RegCompleteHandler ]
 "184
-[v _wr1RegCompleteHandler wr1RegCompleteHandler `(E360  1 s 1 wr1RegCompleteHandler ]
+[v _wr1RegCompleteHandler wr1RegCompleteHandler `(E363  1 s 1 wr1RegCompleteHandler ]
 "191
-[v _wr2RegCompleteHandler wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
+[v _wr2RegCompleteHandler wr2RegCompleteHandler `(E363  1 s 1 wr2RegCompleteHandler ]
 "198
-[v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
-"183 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/i2c1_master.c
+[v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E363  1 s 1 rdBlkRegCompleteHandler ]
+"183 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/i2c1_master.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
 "204
-[v _I2C1_Open I2C1_Open `(E355  1 e 1 0 ]
+[v _I2C1_Open I2C1_Open `(E358  1 e 1 0 ]
 "237
-[v _I2C1_Close I2C1_Close `(E355  1 e 1 0 ]
+[v _I2C1_Close I2C1_Close `(E358  1 e 1 0 ]
 "252
-[v _I2C1_MasterOperation I2C1_MasterOperation `(E355  1 e 1 0 ]
+[v _I2C1_MasterOperation I2C1_MasterOperation `(E358  1 e 1 0 ]
 "276
-[v _I2C1_MasterRead I2C1_MasterRead `(E355  1 e 1 0 ]
+[v _I2C1_MasterRead I2C1_MasterRead `(E358  1 e 1 0 ]
 "281
-[v _I2C1_MasterWrite I2C1_MasterWrite `(E355  1 e 1 0 ]
+[v _I2C1_MasterWrite I2C1_MasterWrite `(E358  1 e 1 0 ]
 "293
 [v _I2C1_SetBuffer I2C1_SetBuffer `(v  1 e 1 0 ]
 "303
@@ -266,47 +276,47 @@ IO_REG_CONFIG 3
 "362
 [v _I2C1_ClearInterruptFlags I2C1_ClearInterruptFlags `T(v  1 s 1 I2C1_ClearInterruptFlags ]
 "378
-[v _I2C1_DO_IDLE I2C1_DO_IDLE `(E22964  1 s 1 I2C1_DO_IDLE ]
+[v _I2C1_DO_IDLE I2C1_DO_IDLE `(E22977  1 s 1 I2C1_DO_IDLE ]
 "385
-[v _I2C1_DO_SEND_ADR_READ I2C1_DO_SEND_ADR_READ `(E22964  1 s 1 I2C1_DO_SEND_ADR_READ ]
+[v _I2C1_DO_SEND_ADR_READ I2C1_DO_SEND_ADR_READ `(E22977  1 s 1 I2C1_DO_SEND_ADR_READ ]
 "396
-[v _I2C1_DO_SEND_ADR_WRITE I2C1_DO_SEND_ADR_WRITE `(E22964  1 s 1 I2C1_DO_SEND_ADR_WRITE ]
+[v _I2C1_DO_SEND_ADR_WRITE I2C1_DO_SEND_ADR_WRITE `(E22977  1 s 1 I2C1_DO_SEND_ADR_WRITE ]
 "403
-[v _I2C1_DO_TX I2C1_DO_TX `(E22964  1 s 1 I2C1_DO_TX ]
+[v _I2C1_DO_TX I2C1_DO_TX `(E22977  1 s 1 I2C1_DO_TX ]
 "436
-[v _I2C1_DO_RX I2C1_DO_RX `(E22964  1 s 1 I2C1_DO_RX ]
+[v _I2C1_DO_RX I2C1_DO_RX `(E22977  1 s 1 I2C1_DO_RX ]
 "460
-[v _I2C1_DO_TX_EMPTY I2C1_DO_TX_EMPTY `(E22964  1 s 1 I2C1_DO_TX_EMPTY ]
+[v _I2C1_DO_TX_EMPTY I2C1_DO_TX_EMPTY `(E22977  1 s 1 I2C1_DO_TX_EMPTY ]
 "479
-[v _I2C1_DO_RX_EMPTY I2C1_DO_RX_EMPTY `(E22964  1 s 1 I2C1_DO_RX_EMPTY ]
+[v _I2C1_DO_RX_EMPTY I2C1_DO_RX_EMPTY `(E22977  1 s 1 I2C1_DO_RX_EMPTY ]
 "504
-[v _I2C1_DO_SEND_RESTART_READ I2C1_DO_SEND_RESTART_READ `(E22964  1 s 1 I2C1_DO_SEND_RESTART_READ ]
+[v _I2C1_DO_SEND_RESTART_READ I2C1_DO_SEND_RESTART_READ `(E22977  1 s 1 I2C1_DO_SEND_RESTART_READ ]
 "510
-[v _I2C1_DO_SEND_RESTART_WRITE I2C1_DO_SEND_RESTART_WRITE `(E22964  1 s 1 I2C1_DO_SEND_RESTART_WRITE ]
+[v _I2C1_DO_SEND_RESTART_WRITE I2C1_DO_SEND_RESTART_WRITE `(E22977  1 s 1 I2C1_DO_SEND_RESTART_WRITE ]
 "516
-[v _I2C1_DO_SEND_RESTART I2C1_DO_SEND_RESTART `(E22964  1 s 1 I2C1_DO_SEND_RESTART ]
+[v _I2C1_DO_SEND_RESTART I2C1_DO_SEND_RESTART `(E22977  1 s 1 I2C1_DO_SEND_RESTART ]
 "521
-[v _I2C1_DO_SEND_STOP I2C1_DO_SEND_STOP `(E22964  1 s 1 I2C1_DO_SEND_STOP ]
+[v _I2C1_DO_SEND_STOP I2C1_DO_SEND_STOP `(E22977  1 s 1 I2C1_DO_SEND_STOP ]
 "532
-[v _I2C1_DO_RX_ACK I2C1_DO_RX_ACK `(E22964  1 s 1 I2C1_DO_RX_ACK ]
+[v _I2C1_DO_RX_ACK I2C1_DO_RX_ACK `(E22977  1 s 1 I2C1_DO_RX_ACK ]
 "538
-[v _I2C1_DO_TX_ACK I2C1_DO_TX_ACK `(E22964  1 s 1 I2C1_DO_TX_ACK ]
+[v _I2C1_DO_TX_ACK I2C1_DO_TX_ACK `(E22977  1 s 1 I2C1_DO_TX_ACK ]
 "544
-[v _I2C1_DO_RX_NACK_STOP I2C1_DO_RX_NACK_STOP `(E22964  1 s 1 I2C1_DO_RX_NACK_STOP ]
+[v _I2C1_DO_RX_NACK_STOP I2C1_DO_RX_NACK_STOP `(E22977  1 s 1 I2C1_DO_RX_NACK_STOP ]
 "551
-[v _I2C1_DO_RX_NACK_RESTART I2C1_DO_RX_NACK_RESTART `(E22964  1 s 1 I2C1_DO_RX_NACK_RESTART ]
+[v _I2C1_DO_RX_NACK_RESTART I2C1_DO_RX_NACK_RESTART `(E22977  1 s 1 I2C1_DO_RX_NACK_RESTART ]
 "557
-[v _I2C1_DO_RESET I2C1_DO_RESET `(E22964  1 s 1 I2C1_DO_RESET ]
+[v _I2C1_DO_RESET I2C1_DO_RESET `(E22977  1 s 1 I2C1_DO_RESET ]
 "564
-[v _I2C1_DO_ADDRESS_NACK I2C1_DO_ADDRESS_NACK `(E22964  1 s 1 I2C1_DO_ADDRESS_NACK ]
+[v _I2C1_DO_ADDRESS_NACK I2C1_DO_ADDRESS_NACK `(E22977  1 s 1 I2C1_DO_ADDRESS_NACK ]
 "579
-[v _I2C1_DO_BUS_COLLISION I2C1_DO_BUS_COLLISION `(E22964  1 s 1 I2C1_DO_BUS_COLLISION ]
+[v _I2C1_DO_BUS_COLLISION I2C1_DO_BUS_COLLISION `(E22977  1 s 1 I2C1_DO_BUS_COLLISION ]
 "595
-[v _I2C1_DO_BUS_ERROR I2C1_DO_BUS_ERROR `(E22964  1 s 1 I2C1_DO_BUS_ERROR ]
+[v _I2C1_DO_BUS_ERROR I2C1_DO_BUS_ERROR `(E22977  1 s 1 I2C1_DO_BUS_ERROR ]
 "609
-[v _I2C1_CallbackReturnStop I2C1_CallbackReturnStop `(E360  1 e 1 0 ]
+[v _I2C1_CallbackReturnStop I2C1_CallbackReturnStop `(E363  1 e 1 0 ]
 "614
-[v _I2C1_CallbackReturnReset I2C1_CallbackReturnReset `(E360  1 e 1 0 ]
+[v _I2C1_CallbackReturnReset I2C1_CallbackReturnReset `(E363  1 e 1 0 ]
 "632
 [v _I2C1_MasterOpen I2C1_MasterOpen `T(a  1 s 1 I2C1_MasterOpen ]
 "651
@@ -359,17 +369,17 @@ IO_REG_CONFIG 3
 [v _I2C1_MasterClearIrq I2C1_MasterClearIrq `T(v  1 s 1 I2C1_MasterClearIrq ]
 "809
 [v _I2C1_MasterWaitForEvent I2C1_MasterWaitForEvent `T(v  1 s 1 I2C1_MasterWaitForEvent ]
-"52 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 "58
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
-"50 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/mcc.c
+"50 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "63
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "77
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"59 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/memory.c
+"59 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/memory.c
 [v _FLASH_ReadByte FLASH_ReadByte `(uc  1 e 1 0 ]
 "95
 [v _FLASH_WriteBlock FLASH_WriteBlock `(c  1 e 1 0 ]
@@ -379,9 +389,9 @@ IO_REG_CONFIG 3
 [v _DATAEE_WriteByte DATAEE_WriteByte `(v  1 e 1 0 ]
 "187
 [v _DATAEE_ReadByte DATAEE_ReadByte `(uc  1 e 1 0 ]
-"55 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/pin_manager.c
+"55 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"72 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/tmr0.c
+"72 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 "140
 [v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
@@ -389,7 +399,7 @@ IO_REG_CONFIG 3
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 "180
 [v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
-"62 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/tmr2.c
+"62 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 "100
 [v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
@@ -401,7 +411,7 @@ IO_REG_CONFIG 3
 [v _TMR2_Counter8BitSet TMR2_Counter8BitSet `(v  1 e 1 0 ]
 "147
 [v _TMR2_Period8BitSet TMR2_Period8BitSet `(v  1 e 1 0 ]
-"66 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/uart2.c
+"66 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/uart2.c
 [v _UART2_Initialize UART2_Initialize `(v  1 e 1 0 ]
 "145
 [v _UART2_Read UART2_Read `(uc  1 e 1 0 ]
@@ -421,7 +431,7 @@ IO_REG_CONFIG 3
 [v _UART2_SetOverrunErrorHandler UART2_SetOverrunErrorHandler `(v  1 e 1 0 ]
 "208
 [v _UART2_SetErrorHandler UART2_SetErrorHandler `(v  1 e 1 0 ]
-"2054 C:/Users/Fernando.Fernandes/.mchp_packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f26k83.h
+"2054 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f26k83.h
 [v _T2TMR T2TMR `VEuc  1 e 1 @16298 ]
 "2059
 [v _TMR2 TMR2 `VEuc  1 e 1 @16298 ]
@@ -431,16 +441,16 @@ IO_REG_CONFIG 3
 [v _PR2 PR2 `VEuc  1 e 1 @16299 ]
 "2130
 [v _T2CON T2CON `VEuc  1 e 1 @16300 ]
-[s S2296 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S2290 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 CKPS 1 0 :3:4 
 `uc 1 ON 1 0 :1:7 
 ]
 "2166
-[s S2300 . 1 `uc 1 T2OUTPS 1 0 :4:0 
+[s S2294 . 1 `uc 1 T2OUTPS 1 0 :4:0 
 `uc 1 T2CKPS 1 0 :3:4 
 `uc 1 T2ON 1 0 :1:7 
 ]
-[s S2304 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
+[s S2298 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
 `uc 1 T2OUTPS1 1 0 :1:1 
 `uc 1 T2OUTPS2 1 0 :1:2 
 `uc 1 T2OUTPS3 1 0 :1:3 
@@ -448,7 +458,7 @@ IO_REG_CONFIG 3
 `uc 1 T2CKPS1 1 0 :1:5 
 `uc 1 T2CKPS2 1 0 :1:6 
 ]
-[s S2312 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S2306 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
@@ -457,58 +467,58 @@ IO_REG_CONFIG 3
 `uc 1 CKPS2 1 0 :1:6 
 `uc 1 TMR2ON 1 0 :1:7 
 ]
-[u S2321 . 1 `S2296 1 . 1 0 `S2300 1 . 1 0 `S2304 1 . 1 0 `S2312 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES2321  1 e 1 @16300 ]
+[u S2315 . 1 `S2290 1 . 1 0 `S2294 1 . 1 0 `S2298 1 . 1 0 `S2306 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES2315  1 e 1 @16300 ]
 "2276
 [v _T2HLT T2HLT `VEuc  1 e 1 @16301 ]
-[s S2182 . 1 `uc 1 MODE 1 0 :5:0 
+[s S2176 . 1 `uc 1 MODE 1 0 :5:0 
 `uc 1 CKSYNC 1 0 :1:5 
 `uc 1 CKPOL 1 0 :1:6 
 `uc 1 PSYNC 1 0 :1:7 
 ]
 "2309
-[s S2187 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S2181 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 MODE3 1 0 :1:3 
 `uc 1 MODE4 1 0 :1:4 
 ]
-[s S2193 . 1 `uc 1 T2MODE 1 0 :5:0 
+[s S2187 . 1 `uc 1 T2MODE 1 0 :5:0 
 `uc 1 T2CKSYNC 1 0 :1:5 
 `uc 1 T2CKPOL 1 0 :1:6 
 `uc 1 T2PSYNC 1 0 :1:7 
 ]
-[s S2198 . 1 `uc 1 T2MODE0 1 0 :1:0 
+[s S2192 . 1 `uc 1 T2MODE0 1 0 :1:0 
 `uc 1 T2MODE1 1 0 :1:1 
 `uc 1 T2MODE2 1 0 :1:2 
 `uc 1 T2MODE3 1 0 :1:3 
 `uc 1 T2MODE4 1 0 :1:4 
 ]
-[u S2204 . 1 `S2182 1 . 1 0 `S2187 1 . 1 0 `S2193 1 . 1 0 `S2198 1 . 1 0 ]
-[v _T2HLTbits T2HLTbits `VES2204  1 e 1 @16301 ]
+[u S2198 . 1 `S2176 1 . 1 0 `S2181 1 . 1 0 `S2187 1 . 1 0 `S2192 1 . 1 0 ]
+[v _T2HLTbits T2HLTbits `VES2198  1 e 1 @16301 ]
 "2404
 [v _T2CLKCON T2CLKCON `VEuc  1 e 1 @16302 ]
 "2562
 [v _T2RST T2RST `VEuc  1 e 1 @16303 ]
-[s S2258 . 1 `uc 1 RSEL 1 0 :5:0 
+[s S2252 . 1 `uc 1 RSEL 1 0 :5:0 
 ]
 "2589
-[s S2260 . 1 `uc 1 RSEL0 1 0 :1:0 
+[s S2254 . 1 `uc 1 RSEL0 1 0 :1:0 
 `uc 1 RSEL1 1 0 :1:1 
 `uc 1 RSEL2 1 0 :1:2 
 `uc 1 RSEL3 1 0 :1:3 
 `uc 1 RSEL4 1 0 :1:4 
 ]
-[s S2266 . 1 `uc 1 T2RSEL 1 0 :5:0 
+[s S2260 . 1 `uc 1 T2RSEL 1 0 :5:0 
 ]
-[s S2268 . 1 `uc 1 T2RSEL0 1 0 :1:0 
+[s S2262 . 1 `uc 1 T2RSEL0 1 0 :1:0 
 `uc 1 T2RSEL1 1 0 :1:1 
 `uc 1 T2RSEL2 1 0 :1:2 
 `uc 1 T2RSEL3 1 0 :1:3 
 `uc 1 T2RSEL4 1 0 :1:4 
 ]
-[u S2274 . 1 `S2258 1 . 1 0 `S2260 1 . 1 0 `S2266 1 . 1 0 `S2268 1 . 1 0 ]
-[v _T2RSTbits T2RSTbits `VES2274  1 e 1 @16303 ]
+[u S2268 . 1 `S2252 1 . 1 0 `S2254 1 . 1 0 `S2260 1 . 1 0 `S2262 1 . 1 0 ]
+[v _T2RSTbits T2RSTbits `VES2268  1 e 1 @16303 ]
 "3530
 [v _TMR0L TMR0L `VEuc  1 e 1 @16310 ]
 "3668
@@ -540,7 +550,7 @@ IO_REG_CONFIG 3
 [v _T0CON1 T0CON1 `VEuc  1 e 1 @16313 ]
 "4162
 [v _LATA LATA `VEuc  1 e 1 @16314 ]
-[s S2545 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S2501 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -550,7 +560,7 @@ IO_REG_CONFIG 3
 `uc 1 LATA7 1 0 :1:7 
 ]
 "4189
-[s S2554 . 1 `uc 1 LA0 1 0 :1:0 
+[s S2510 . 1 `uc 1 LA0 1 0 :1:0 
 `uc 1 LA1 1 0 :1:1 
 `uc 1 LA2 1 0 :1:2 
 `uc 1 LA3 1 0 :1:3 
@@ -559,13 +569,13 @@ IO_REG_CONFIG 3
 `uc 1 LA6 1 0 :1:6 
 `uc 1 LA7 1 0 :1:7 
 ]
-[u S2563 . 1 `S2545 1 . 1 0 `S2554 1 . 1 0 ]
-[v _LATAbits LATAbits `VES2563  1 e 1 @16314 ]
+[u S2519 . 1 `S2501 1 . 1 0 `S2510 1 . 1 0 ]
+[v _LATAbits LATAbits `VES2519  1 e 1 @16314 ]
 "4274
 [v _LATB LATB `VEuc  1 e 1 @16315 ]
 "4386
 [v _LATC LATC `VEuc  1 e 1 @16316 ]
-[s S2616 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S2611 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -575,7 +585,7 @@ IO_REG_CONFIG 3
 `uc 1 LATC7 1 0 :1:7 
 ]
 "4413
-[s S2625 . 1 `uc 1 LC0 1 0 :1:0 
+[s S2620 . 1 `uc 1 LC0 1 0 :1:0 
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
 `uc 1 LC3 1 0 :1:3 
@@ -584,32 +594,33 @@ IO_REG_CONFIG 3
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
-[u S2634 . 1 `S2616 1 . 1 0 `S2625 1 . 1 0 ]
-[v _LATCbits LATCbits `VES2634  1 e 1 @16316 ]
+[u S2629 . 1 `S2611 1 . 1 0 `S2620 1 . 1 0 ]
+[v _LATCbits LATCbits `VES2629  1 e 1 @16316 ]
 "4498
 [v _TRISA TRISA `VEuc  1 e 1 @16322 ]
 "4560
 [v _TRISB TRISB `VEuc  1 e 1 @16323 ]
 "4622
 [v _TRISC TRISC `VEuc  1 e 1 @16324 ]
-[s S2502 . 1 `uc 1 RA0 1 0 :1:0 
-`uc 1 RA1 1 0 :1:1 
-`uc 1 RA2 1 0 :1:2 
-`uc 1 RA3 1 0 :1:3 
-`uc 1 RA4 1 0 :1:4 
-`uc 1 RA5 1 0 :1:5 
-`uc 1 RA6 1 0 :1:6 
-`uc 1 RA7 1 0 :1:7 
+[s S2549 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
 ]
-"4708
-[s S2511 . 1 `uc 1 ULPWUIN 1 0 :1:0 
-`uc 1 . 1 0 :4:1 
-`uc 1 LVDIN 1 0 :1:5 
-`uc 1 . 1 0 :1:6 
-`uc 1 RJPU 1 0 :1:7 
+"4865
+[s S2558 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+`uc 1 PA1 1 0 :1:2 
 ]
-[u S2517 . 1 `S2502 1 . 1 0 `S2511 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES2517  1 e 1 @16330 ]
+[s S2562 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PA2 1 0 :1:1 
+]
+[u S2565 . 1 `S2549 1 . 1 0 `S2558 1 . 1 0 `S2562 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES2565  1 e 1 @16332 ]
 [s S24 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
@@ -632,7 +643,7 @@ IO_REG_CONFIG 3
 [v _TBLPTRH TBLPTRH `VEuc  1 e 1 @16375 ]
 "6180
 [v _TBLPTRU TBLPTRU `VEuc  1 e 1 @16376 ]
-[s S1787 . 1 `uc 1 DMA1SCNTIE 1 0 :1:0 
+[s S1781 . 1 `uc 1 DMA1SCNTIE 1 0 :1:0 
 `uc 1 DMA1DCNTIE 1 0 :1:1 
 `uc 1 DMA1ORIE 1 0 :1:2 
 `uc 1 DMA1AIE 1 0 :1:3 
@@ -642,11 +653,11 @@ IO_REG_CONFIG 3
 `uc 1 I2C1RXIE 1 0 :1:7 
 ]
 "25324
-[s S1796 . 1 `uc 1 . 1 0 :6:0 
+[s S1790 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 CMIE 1 0 :1:6 
 ]
-[u S1799 . 1 `S1787 1 . 1 0 `S1796 1 . 1 0 ]
-[v _PIE2bits PIE2bits `VES1799  1 e 1 @14738 ]
+[u S1793 . 1 `S1781 1 . 1 0 `S1790 1 . 1 0 ]
+[v _PIE2bits PIE2bits `VES1793  1 e 1 @14738 ]
 [s S460 . 1 `uc 1 I2C1TXIE 1 0 :1:0 
 `uc 1 I2C1IE 1 0 :1:1 
 `uc 1 I2C1EIE 1 0 :1:2 
@@ -670,7 +681,7 @@ IO_REG_CONFIG 3
 ]
 [u S480 . 1 `S460 1 . 1 0 `S469 1 . 1 0 `S475 1 . 1 0 ]
 [v _PIE3bits PIE3bits `VES480  1 e 1 @14739 ]
-[s S1085 . 1 `uc 1 SWIF 1 0 :1:0 
+[s S1079 . 1 `uc 1 SWIF 1 0 :1:0 
 `uc 1 HLVDIF 1 0 :1:1 
 `uc 1 OSFIF 1 0 :1:2 
 `uc 1 CSWIF 1 0 :1:3 
@@ -680,9 +691,9 @@ IO_REG_CONFIG 3
 `uc 1 IOCIF 1 0 :1:7 
 ]
 "25896
-[u S1094 . 1 `S1085 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES1094  1 e 1 @14752 ]
-[s S1873 . 1 `uc 1 DMA1SCNTIF 1 0 :1:0 
+[u S1088 . 1 `S1079 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES1088  1 e 1 @14752 ]
+[s S1867 . 1 `uc 1 DMA1SCNTIF 1 0 :1:0 
 `uc 1 DMA1DCNTIF 1 0 :1:1 
 `uc 1 DMA1ORIF 1 0 :1:2 
 `uc 1 DMA1AIF 1 0 :1:3 
@@ -692,11 +703,11 @@ IO_REG_CONFIG 3
 `uc 1 I2C1RXIF 1 0 :1:7 
 ]
 "26055
-[s S1882 . 1 `uc 1 . 1 0 :6:0 
+[s S1876 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 CMIF 1 0 :1:6 
 ]
-[u S1885 . 1 `S1873 1 . 1 0 `S1882 1 . 1 0 ]
-[v _PIR2bits PIR2bits `VES1885  1 e 1 @14754 ]
+[u S1879 . 1 `S1867 1 . 1 0 `S1876 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES1879  1 e 1 @14754 ]
 [s S428 . 1 `uc 1 I2C1TXIF 1 0 :1:0 
 `uc 1 I2C1IF 1 0 :1:1 
 `uc 1 I2C1EIF 1 0 :1:2 
@@ -714,7 +725,7 @@ IO_REG_CONFIG 3
 ]
 [u S442 . 1 `S428 1 . 1 0 `S437 1 . 1 0 ]
 [v _PIR3bits PIR3bits `VES442  1 e 1 @14755 ]
-[s S2138 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S2132 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR1GIF 1 0 :1:1 
 `uc 1 TMR2IF 1 0 :1:2 
 `uc 1 CCP1IF 1 0 :1:3 
@@ -724,8 +735,8 @@ IO_REG_CONFIG 3
 `uc 1 INT1IF 1 0 :1:7 
 ]
 "26200
-[u S2147 . 1 `S2138 1 . 1 0 ]
-[v _PIR4bits PIR4bits `VES2147  1 e 1 @14756 ]
+[u S2141 . 1 `S2132 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES2141  1 e 1 @14756 ]
 [s S244 . 1 `uc 1 I2C2RXIF 1 0 :1:0 
 `uc 1 I2C2TXIF 1 0 :1:1 
 `uc 1 I2C2IF 1 0 :1:2 
@@ -770,7 +781,7 @@ IO_REG_CONFIG 3
 [v _NVMADRH NVMADRH `VEuc  1 e 1 @14817 ]
 "27823
 [v _NVMDAT NVMDAT `VEuc  1 e 1 @14819 ]
-[s S1003 . 1 `uc 1 RD 1 0 :1:0 
+[s S997 . 1 `uc 1 RD 1 0 :1:0 
 `uc 1 WR 1 0 :1:1 
 `uc 1 WREN 1 0 :1:2 
 `uc 1 WRERR 1 0 :1:3 
@@ -779,19 +790,19 @@ IO_REG_CONFIG 3
 `uc 1 REG 1 0 :2:6 
 ]
 "27981
-[s S1011 . 1 `uc 1 . 1 0 :6:0 
+[s S1005 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 REG0 1 0 :1:6 
 `uc 1 REG1 1 0 :1:7 
 ]
-[s S1015 . 1 `uc 1 . 1 0 :6:0 
+[s S1009 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 NVMREG 1 0 :2:6 
 ]
-[s S1018 . 1 `uc 1 . 1 0 :6:0 
+[s S1012 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 NVMREG0 1 0 :1:6 
 `uc 1 NVMREG1 1 0 :1:7 
 ]
-[u S1022 . 1 `S1003 1 . 1 0 `S1011 1 . 1 0 `S1015 1 . 1 0 `S1018 1 . 1 0 ]
-[v _NVMCON1bits NVMCON1bits `VES1022  1 e 1 @14821 ]
+[u S1016 . 1 `S997 1 . 1 0 `S1005 1 . 1 0 `S1009 1 . 1 0 `S1012 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES1016  1 e 1 @14821 ]
 "28041
 [v _NVMCON2 NVMCON2 `VEuc  1 e 1 @14822 ]
 "28821
@@ -848,7 +859,7 @@ IO_REG_CONFIG 3
 [v _I2C1CNT I2C1CNT `VEuc  1 e 1 @15724 ]
 "45218
 [v _I2C1CON0 I2C1CON0 `VEuc  1 e 1 @15731 ]
-[s S1612 . 1 `uc 1 MODE 1 0 :3:0 
+[s S1606 . 1 `uc 1 MODE 1 0 :3:0 
 `uc 1 MDR 1 0 :1:3 
 `uc 1 CSTR 1 0 :1:4 
 `uc 1 S 1 0 :1:5 
@@ -856,20 +867,20 @@ IO_REG_CONFIG 3
 `uc 1 EN 1 0 :1:7 
 ]
 "45240
-[s S1619 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S1613 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 I2CEN 1 0 :1:7 
 ]
 "45240
-[u S1625 . 1 `S1612 1 . 1 0 `S1619 1 . 1 0 ]
+[u S1619 . 1 `S1606 1 . 1 0 `S1613 1 . 1 0 ]
 "45240
 "45240
-[v _I2C1CON0bits I2C1CON0bits `VES1625  1 e 1 @15731 ]
+[v _I2C1CON0bits I2C1CON0bits `VES1619  1 e 1 @15731 ]
 "45295
 [v _I2C1CON1 I2C1CON1 `VEuc  1 e 1 @15732 ]
-[s S1665 . 1 `uc 1 CSD 1 0 :1:0 
+[s S1659 . 1 `uc 1 CSD 1 0 :1:0 
 `uc 1 TXU 1 0 :1:1 
 `uc 1 RXO 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -879,15 +890,15 @@ IO_REG_CONFIG 3
 `uc 1 ACKCNT 1 0 :1:7 
 ]
 "45312
-[u S1674 . 1 `S1665 1 . 1 0 ]
+[u S1668 . 1 `S1659 1 . 1 0 ]
 "45312
 "45312
-[v _I2C1CON1bits I2C1CON1bits `VES1674  1 e 1 @15732 ]
+[v _I2C1CON1bits I2C1CON1bits `VES1668  1 e 1 @15732 ]
 "45352
 [v _I2C1CON2 I2C1CON2 `VEuc  1 e 1 @15733 ]
 "45428
 [v _I2C1ERR I2C1ERR `VEuc  1 e 1 @15734 ]
-[s S1686 . 1 `uc 1 NACKIE 1 0 :1:0 
+[s S1680 . 1 `uc 1 NACKIE 1 0 :1:0 
 `uc 1 BCLIE 1 0 :1:1 
 `uc 1 BTOIE 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -896,7 +907,7 @@ IO_REG_CONFIG 3
 `uc 1 BTOIF 1 0 :1:6 
 ]
 "45453
-[s S1694 . 1 `uc 1 NACK1IE 1 0 :1:0 
+[s S1688 . 1 `uc 1 NACK1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 BTO1IE 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -905,11 +916,11 @@ IO_REG_CONFIG 3
 `uc 1 BTO1IF 1 0 :1:6 
 ]
 "45453
-[u S1702 . 1 `S1686 1 . 1 0 `S1694 1 . 1 0 ]
+[u S1696 . 1 `S1680 1 . 1 0 `S1688 1 . 1 0 ]
 "45453
 "45453
-[v _I2C1ERRbits I2C1ERRbits `VES1702  1 e 1 @15734 ]
-[s S1642 . 1 `uc 1 RXBF 1 0 :1:0 
+[v _I2C1ERRbits I2C1ERRbits `VES1696  1 e 1 @15734 ]
+[s S1636 . 1 `uc 1 RXBF 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 CLRBF 1 0 :1:2 
 `uc 1 RXRE 1 0 :1:3 
@@ -919,13 +930,13 @@ IO_REG_CONFIG 3
 `uc 1 TXWE 1 0 :1:7 
 ]
 "45625
-[u S1651 . 1 `S1642 1 . 1 0 ]
+[u S1645 . 1 `S1636 1 . 1 0 ]
 "45625
 "45625
-[v _I2C1STAT1bits I2C1STAT1bits `VES1651  1 e 1 @15736 ]
+[v _I2C1STAT1bits I2C1STAT1bits `VES1645  1 e 1 @15736 ]
 "45655
 [v _I2C1PIR I2C1PIR `VEuc  1 e 1 @15737 ]
-[s S1722 . 1 `uc 1 SCIF 1 0 :1:0 
+[s S1716 . 1 `uc 1 SCIF 1 0 :1:0 
 `uc 1 RSCIF 1 0 :1:1 
 `uc 1 PCIF 1 0 :1:2 
 `uc 1 ADRIF 1 0 :1:3 
@@ -935,7 +946,7 @@ IO_REG_CONFIG 3
 `uc 1 CNTIF 1 0 :1:7 
 ]
 "45682
-[s S1731 . 1 `uc 1 SC1IF 1 0 :1:0 
+[s S1725 . 1 `uc 1 SC1IF 1 0 :1:0 
 `uc 1 RSC1IF 1 0 :1:1 
 `uc 1 PC1IF 1 0 :1:2 
 `uc 1 ADR1IF 1 0 :1:3 
@@ -945,13 +956,13 @@ IO_REG_CONFIG 3
 `uc 1 CNT1IF 1 0 :1:7 
 ]
 "45682
-[u S1740 . 1 `S1722 1 . 1 0 `S1731 1 . 1 0 ]
+[u S1734 . 1 `S1716 1 . 1 0 `S1725 1 . 1 0 ]
 "45682
 "45682
-[v _I2C1PIRbits I2C1PIRbits `VES1740  1 e 1 @15737 ]
+[v _I2C1PIRbits I2C1PIRbits `VES1734  1 e 1 @15737 ]
 "45757
 [v _I2C1PIE I2C1PIE `VEuc  1 e 1 @15738 ]
-[s S1815 . 1 `uc 1 SCIE 1 0 :1:0 
+[s S1809 . 1 `uc 1 SCIE 1 0 :1:0 
 `uc 1 RSCIE 1 0 :1:1 
 `uc 1 PCIE 1 0 :1:2 
 `uc 1 ADRIE 1 0 :1:3 
@@ -961,7 +972,7 @@ IO_REG_CONFIG 3
 `uc 1 CNTIE 1 0 :1:7 
 ]
 "45784
-[s S1824 . 1 `uc 1 SC1IE 1 0 :1:0 
+[s S1818 . 1 `uc 1 SC1IE 1 0 :1:0 
 `uc 1 RSC1IE 1 0 :1:1 
 `uc 1 PC1IE 1 0 :1:2 
 `uc 1 ADR1IE 1 0 :1:3 
@@ -971,10 +982,10 @@ IO_REG_CONFIG 3
 `uc 1 CNT1IE 1 0 :1:7 
 ]
 "45784
-[u S1833 . 1 `S1815 1 . 1 0 `S1824 1 . 1 0 ]
+[u S1827 . 1 `S1809 1 . 1 0 `S1818 1 . 1 0 ]
 "45784
 "45784
-[v _I2C1PIEbits I2C1PIEbits `VES1833  1 e 1 @15738 ]
+[v _I2C1PIEbits I2C1PIEbits `VES1827  1 e 1 @15738 ]
 "45859
 [v _I2C1CLK I2C1CLK `VEuc  1 e 1 @15739 ]
 "46007
@@ -1117,7 +1128,7 @@ IO_REG_CONFIG 3
 [v _ADPREH ADPREH `VEuc  1 e 1 @16119 ]
 "52294
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @16120 ]
-[s S643 . 1 `uc 1 GO 1 0 :1:0 
+[s S637 . 1 `uc 1 GO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 FM 1 0 :2:2 
 `uc 1 CS 1 0 :1:4 
@@ -1126,7 +1137,7 @@ IO_REG_CONFIG 3
 `uc 1 ON 1 0 :1:7 
 ]
 "52334
-[s S651 . 1 `uc 1 ADGO 1 0 :1:0 
+[s S645 . 1 `uc 1 ADGO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM 1 0 :2:2 
 `uc 1 ADCS 1 0 :1:4 
@@ -1135,54 +1146,54 @@ IO_REG_CONFIG 3
 `uc 1 ADON 1 0 :1:7 
 ]
 "52334
-[s S659 . 1 `uc 1 DONE 1 0 :1:0 
+[s S653 . 1 `uc 1 DONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 FM0 1 0 :1:2 
 `uc 1 FM1 1 0 :1:3 
 ]
 "52334
-[s S664 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
+[s S658 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
 ]
 "52334
-[s S666 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+[s S660 . 1 `uc 1 GO_nDONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM0 1 0 :1:2 
 `uc 1 ADFM1 1 0 :1:3 
 ]
 "52334
-[u S671 . 1 `S643 1 . 1 0 `S651 1 . 1 0 `S659 1 . 1 0 `S664 1 . 1 0 `S666 1 . 1 0 ]
+[u S665 . 1 `S637 1 . 1 0 `S645 1 . 1 0 `S653 1 . 1 0 `S658 1 . 1 0 `S660 1 . 1 0 ]
 "52334
 "52334
-[v _ADCON0bits ADCON0bits `VES671  1 e 1 @16120 ]
+[v _ADCON0bits ADCON0bits `VES665  1 e 1 @16120 ]
 "52424
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @16121 ]
-[s S902 . 1 `uc 1 DSEN 1 0 :1:0 
+[s S896 . 1 `uc 1 DSEN 1 0 :1:0 
 `uc 1 . 1 0 :4:1 
 `uc 1 GPOL 1 0 :1:5 
 `uc 1 IPEN 1 0 :1:6 
 `uc 1 PPOL 1 0 :1:7 
 ]
 "52445
-[s S908 . 1 `uc 1 ADDSEN 1 0 :1:0 
+[s S902 . 1 `uc 1 ADDSEN 1 0 :1:0 
 `uc 1 . 1 0 :4:1 
 `uc 1 ADGPOL 1 0 :1:5 
 `uc 1 ADIPEN 1 0 :1:6 
 `uc 1 ADPPOL 1 0 :1:7 
 ]
 "52445
-[u S914 . 1 `S902 1 . 1 0 `S908 1 . 1 0 ]
+[u S908 . 1 `S896 1 . 1 0 `S902 1 . 1 0 ]
 "52445
 "52445
-[v _ADCON1bits ADCON1bits `VES914  1 e 1 @16121 ]
+[v _ADCON1bits ADCON1bits `VES908  1 e 1 @16121 ]
 "52490
 [v _ADCON2 ADCON2 `VEuc  1 e 1 @16122 ]
-[s S763 . 1 `uc 1 MODE 1 0 :3:0 
+[s S757 . 1 `uc 1 MODE 1 0 :3:0 
 `uc 1 ACLR 1 0 :1:3 
 `uc 1 CRS 1 0 :3:4 
 `uc 1 PSIS 1 0 :1:7 
 ]
 "52538
-[s S768 . 1 `uc 1 ADMD0 1 0 :1:0 
+[s S762 . 1 `uc 1 ADMD0 1 0 :1:0 
 `uc 1 ADMD1 1 0 :1:1 
 `uc 1 ADMD2 1 0 :1:2 
 `uc 1 ADACLR 1 0 :1:3 
@@ -1192,12 +1203,12 @@ IO_REG_CONFIG 3
 `uc 1 ADPSIS 1 0 :1:7 
 ]
 "52538
-[s S777 . 1 `uc 1 ADMD 1 0 :3:0 
+[s S771 . 1 `uc 1 ADMD 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 ADCRS 1 0 :3:4 
 ]
 "52538
-[s S781 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S775 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -1206,29 +1217,29 @@ IO_REG_CONFIG 3
 `uc 1 CRS2 1 0 :1:6 
 ]
 "52538
-[s S789 . 1 `uc 1 MD 1 0 :3:0 
+[s S783 . 1 `uc 1 MD 1 0 :3:0 
 ]
 "52538
-[s S791 . 1 `uc 1 MD0 1 0 :1:0 
+[s S785 . 1 `uc 1 MD0 1 0 :1:0 
 `uc 1 MD1 1 0 :1:1 
 `uc 1 MD2 1 0 :1:2 
 ]
 "52538
-[s S795 . 1 `uc 1 ADMODE 1 0 :3:0 
+[s S789 . 1 `uc 1 ADMODE 1 0 :3:0 
 ]
 "52538
-[u S797 . 1 `S763 1 . 1 0 `S768 1 . 1 0 `S777 1 . 1 0 `S781 1 . 1 0 `S789 1 . 1 0 `S791 1 . 1 0 `S795 1 . 1 0 ]
+[u S791 . 1 `S757 1 . 1 0 `S762 1 . 1 0 `S771 1 . 1 0 `S775 1 . 1 0 `S783 1 . 1 0 `S785 1 . 1 0 `S789 1 . 1 0 ]
 "52538
 "52538
-[v _ADCON2bits ADCON2bits `VES797  1 e 1 @16122 ]
+[v _ADCON2bits ADCON2bits `VES791  1 e 1 @16122 ]
 "52668
 [v _ADCON3 ADCON3 `VEuc  1 e 1 @16123 ]
-[s S708 . 1 `uc 1 TMD 1 0 :3:0 
+[s S702 . 1 `uc 1 TMD 1 0 :3:0 
 `uc 1 SOI 1 0 :1:3 
 `uc 1 CALC 1 0 :3:4 
 ]
 "52703
-[s S712 . 1 `uc 1 ADTMD0 1 0 :1:0 
+[s S706 . 1 `uc 1 ADTMD0 1 0 :1:0 
 `uc 1 ADTMD1 1 0 :1:1 
 `uc 1 ADTMD2 1 0 :1:2 
 `uc 1 ADSOI 1 0 :1:3 
@@ -1237,12 +1248,12 @@ IO_REG_CONFIG 3
 `uc 1 ADCALC2 1 0 :1:6 
 ]
 "52703
-[s S720 . 1 `uc 1 ADTMD 1 0 :3:0 
+[s S714 . 1 `uc 1 ADTMD 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 ADCALC 1 0 :3:4 
 ]
 "52703
-[s S724 . 1 `uc 1 TMD0 1 0 :1:0 
+[s S718 . 1 `uc 1 TMD0 1 0 :1:0 
 `uc 1 TMD1 1 0 :1:1 
 `uc 1 TMD2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -1251,13 +1262,13 @@ IO_REG_CONFIG 3
 `uc 1 CALC2 1 0 :1:6 
 ]
 "52703
-[u S732 . 1 `S708 1 . 1 0 `S712 1 . 1 0 `S720 1 . 1 0 `S724 1 . 1 0 ]
+[u S726 . 1 `S702 1 . 1 0 `S706 1 . 1 0 `S714 1 . 1 0 `S718 1 . 1 0 ]
 "52703
 "52703
-[v _ADCON3bits ADCON3bits `VES732  1 e 1 @16123 ]
+[v _ADCON3bits ADCON3bits `VES726  1 e 1 @16123 ]
 "52798
 [v _ADSTAT ADSTAT `VEuc  1 e 1 @16124 ]
-[s S842 . 1 `uc 1 STAT 1 0 :3:0 
+[s S836 . 1 `uc 1 STAT 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 MATH 1 0 :1:4 
 `uc 1 LTHR 1 0 :1:5 
@@ -1265,7 +1276,7 @@ IO_REG_CONFIG 3
 `uc 1 OV 1 0 :1:7 
 ]
 "52833
-[s S849 . 1 `uc 1 ADSTAT0 1 0 :1:0 
+[s S843 . 1 `uc 1 ADSTAT0 1 0 :1:0 
 `uc 1 ADSTAT1 1 0 :1:1 
 `uc 1 ADSTAT2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -1275,59 +1286,60 @@ IO_REG_CONFIG 3
 `uc 1 ADAOV 1 0 :1:7 
 ]
 "52833
-[s S858 . 1 `uc 1 ADSTAT 1 0 :3:0 
+[s S852 . 1 `uc 1 ADSTAT 1 0 :3:0 
 `uc 1 . 1 0 :4:3 
 `uc 1 ADOV 1 0 :1:7 
 ]
 "52833
-[s S862 . 1 `uc 1 STAT0 1 0 :1:0 
+[s S856 . 1 `uc 1 STAT0 1 0 :1:0 
 `uc 1 STAT1 1 0 :1:1 
 `uc 1 STAT2 1 0 :1:2 
 ]
 "52833
-[u S866 . 1 `S842 1 . 1 0 `S849 1 . 1 0 `S858 1 . 1 0 `S862 1 . 1 0 ]
+[u S860 . 1 `S836 1 . 1 0 `S843 1 . 1 0 `S852 1 . 1 0 `S856 1 . 1 0 ]
 "52833
 "52833
-[v _ADSTATbits ADSTATbits `VES866  1 e 1 @16124 ]
+[v _ADSTATbits ADSTATbits `VES860  1 e 1 @16124 ]
 "52923
 [v _ADREF ADREF `VEuc  1 e 1 @16125 ]
 "53005
 [v _ADACT ADACT `VEuc  1 e 1 @16126 ]
 "53097
 [v _ADCLK ADCLK `VEuc  1 e 1 @16127 ]
-"99 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\doprnt.c
+"153 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\doprnt.c
 [v _prec prec `i  1 s 2 prec ]
 [v _width width `i  1 s 2 width ]
-"100
+"154
 [v _flags flags `uc  1 s 1 flags ]
-"125
+"185
 [v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
-[s S2422 . 4 `uc 1 address 1 0 `uc 1 ioConfig 1 1 `uc 1 outImage 1 2 `uc 1 inImage 1 3 ]
-"91 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\main.c
-[v _g_io_expander1 g_io_expander1 `S2422  1 e 4 0 ]
-[s S2450 . 28 `a 1 accelerometer_fail 1 0 `a 1 bike_docked 1 1 `a 1 lock_violed 1 2 `uo 1 my_id 8 3 `ul 1 random_number 4 11 `uc 1 lock_last_command 1 15 `uc 1 state_lock 1 16 `uc 1 state_motor 1 17 `uc 1 state_pin_left 1 18 `uc 1 state_pin_right 1 19 `uo 1 rfid_current_tag 8 20 ]
-"97
-[v _g_lock_status g_lock_status `S2450  1 e 28 0 ]
-"102
-[v _g_flag_timer_1s g_flag_timer_1s `a  1 e 1 0 ]
+[s S2416 . 4 `uc 1 address 1 0 `uc 1 ioConfig 1 1 `uc 1 outImage 1 2 `uc 1 inImage 1 3 ]
+"92 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\main.c
+[v _g_io_expander1 g_io_expander1 `S2416  1 e 4 0 ]
 "103
+[v _g_flag_timer_1s g_flag_timer_1s `a  1 e 1 0 ]
+"104
 [v _g_flag_timer_100ms g_flag_timer_100ms `a  1 e 1 0 ]
-"106
-[v _g_adc_1 g_adc_1 `us  1 e 2 0 ]
 "107
-[v _g_adc_2 g_adc_2 `us  1 e 2 0 ]
+[v _g_fail_code g_fail_code `uc  1 e 1 0 ]
+"108
+[v _g_state_machine g_state_machine `uc  1 e 1 0 ]
 "110
+[v _g_adc_1 g_adc_1 `us  1 e 2 0 ]
+"111
+[v _g_adc_2 g_adc_2 `us  1 e 2 0 ]
+"114
 [v _g_wait_time g_wait_time `us  1 e 2 0 ]
-"159 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/i2c1_master.c
-[v _i2c1_fsmStateTable i2c1_fsmStateTable `C[19]*.37(E22964  1 e 38 0 ]
-[s S1398 . 36 `[6]*.37(E360 1 callbackTable 12 0 `[6]*.39v 1 callbackPayload 12 12 `us 1 time_out 2 24 `us 1 time_out_value 2 26 `uc 1 address 1 28 `*.39uc 1 data_ptr 2 29 `ui 1 data_length 2 31 `E22964 1 state 1 33 `E355 1 error 1 34 `uc 1 addressNackCheck 1 35 :2:0 
+"159 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/i2c1_master.c
+[v _i2c1_fsmStateTable i2c1_fsmStateTable `C[19]*.37(E22977  1 e 38 0 ]
+[s S1392 . 36 `[6]*.37(E363 1 callbackTable 12 0 `[6]*.39v 1 callbackPayload 12 12 `us 1 time_out 2 24 `us 1 time_out_value 2 26 `uc 1 address 1 28 `*.39uc 1 data_ptr 2 29 `ui 1 data_length 2 31 `E22977 1 state 1 33 `E358 1 error 1 34 `uc 1 addressNackCheck 1 35 :2:0 
 `uc 1 busy 1 35 :1:2 
 `uc 1 inUse 1 35 :1:3 
 `uc 1 bufferFree 1 35 :1:4 
 ]
 "181
-[v _I2C1_Status I2C1_Status `S1398  1 e 36 0 ]
-"59 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/tmr0.c
+[v _I2C1_Status I2C1_Status `S1392  1 e 36 0 ]
+"59 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/tmr0.c
 [v _timer0ReloadVal16bit timer0ReloadVal16bit `VEus  1 e 2 0 ]
 "70
 [v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
@@ -1336,7 +1348,7 @@ IO_REG_CONFIG 3
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
-"53 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/uart2.c
+"53 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/uart2.c
 [u S193 . 1 `S188 1 . 1 0 `uc 1 status 1 0 ]
 [v _uart2RxLastError uart2RxLastError `VES193  1 s 1 uart2RxLastError ]
 "58
@@ -1345,119 +1357,183 @@ IO_REG_CONFIG 3
 [v _UART2_OverrunErrorHandler UART2_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "60
 [v _UART2_ErrorHandler UART2_ErrorHandler `*.37(v  1 e 2 0 ]
-"116 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\main.c
+"119 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"138
+"142
 [v main@flag_debug flag_debug `a  1 s 1 flag_debug ]
-"145
+"154
 } 0
-"365
+"505
 [v _fx_system_start fx_system_start `(v  1 e 1 0 ]
 {
-"383
+"527
 } 0
-"42 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\header_files/tca9534.c
+"11 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\header_files/tca9534.c
+[v _IO_ConfigPorts IO_ConfigPorts `(v  1 e 1 0 ]
+{
+[s S2416 . 4 `uc 1 address 1 0 `uc 1 ioConfig 1 1 `uc 1 outImage 1 2 `uc 1 inImage 1 3 ]
+[v IO_ConfigPorts@ioStruct ioStruct `*.30S2416  1 p 1 27 ]
+[v IO_ConfigPorts@port port `uc  1 p 1 28 ]
+"20
+} 0
+"329 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\main.c
+[v _control_wdt control_wdt `(v  1 e 1 0 ]
+{
+"331
+[v control_wdt@last_flag last_flag `a  1 s 1 last_flag ]
+"343
+} 0
+"157
+[v _control_system control_system `(v  1 e 1 0 ]
+{
+"296
+[v control_system@flag_fail flag_fail `a  1 s 1 flag_fail ]
+"327
+} 0
+"390
+[v _fx_read_button fx_read_button `(a  1 e 1 0 ]
+{
+"392
+[v fx_read_button@button_pressed button_pressed `a  1 s 1 button_pressed ]
+"393
+[v fx_read_button@counter counter `us  1 s 2 counter ]
+"418
+} 0
+"375
+[v _fx_read_adc fx_read_adc `(v  1 e 1 0 ]
+{
+"380
+[v fx_read_adc@i i `uc  1 a 1 13 ]
+"378
+[v fx_read_adc@adc_2 adc_2 `us  1 a 2 11 ]
+"377
+[v fx_read_adc@adc_1 adc_1 `us  1 a 2 9 ]
+"388
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 6 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 8 ]
+"7
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 4 ]
+"30
+} 0
+"137 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/adcc.c
+[v _ADCC_GetSingleConversion ADCC_GetSingleConversion `(us  1 e 2 0 ]
+{
+[v ADCC_GetSingleConversion@channel channel `E22586  1 a 1 wreg ]
+[v ADCC_GetSingleConversion@channel channel `E22586  1 a 1 wreg ]
+"140
+[v ADCC_GetSingleConversion@channel channel `E22586  1 a 1 6 ]
+"160
+} 0
+"442 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\main.c
+[v _fx_led_show_fail fx_led_show_fail `(v  1 e 1 0 ]
+{
+[v fx_led_show_fail@fail_code fail_code `uc  1 a 1 wreg ]
+[v fx_led_show_fail@fail_code fail_code `uc  1 a 1 wreg ]
+"450
+[v fx_led_show_fail@flag_led flag_led `a  1 s 1 flag_led ]
+"451
+[v fx_led_show_fail@flag_time flag_time `a  1 s 1 flag_time ]
+"453
+[v fx_led_show_fail@time_led time_led `us  1 s 2 time_led ]
+"454
+[v fx_led_show_fail@blink_counter blink_counter `us  1 s 2 blink_counter ]
+"458
+[v fx_led_show_fail@fail_code fail_code `uc  1 a 1 2 ]
+"503
+} 0
+"431
+[v _fx_led_green_slow fx_led_green_slow `(v  1 e 1 0 ]
+{
+"433
+[v fx_led_green_slow@flag_led flag_led `a  1 s 1 flag_led ]
+"440
+} 0
+"420
+[v _fx_led_green_fast fx_led_green_fast `(v  1 e 1 0 ]
+{
+"422
+[v fx_led_green_fast@flag_led flag_led `a  1 s 1 flag_led ]
+"429
+} 0
+"28 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\header_files/tca9534.c
+[v _IO_SetPin IO_SetPin `(v  1 e 1 0 ]
+{
+"36
+[v IO_SetPin@mask mask `uc  1 a 1 45 ]
+[s S2416 . 4 `uc 1 address 1 0 `uc 1 ioConfig 1 1 `uc 1 outImage 1 2 `uc 1 inImage 1 3 ]
+"28
+[v IO_SetPin@ioStruct ioStruct `*.30S2416  1 p 1 41 ]
+[v IO_SetPin@pin pin `uc  1 p 1 42 ]
+"40
+} 0
+"42
 [v _IO_ResetPin IO_ResetPin `(v  1 e 1 0 ]
 {
 "50
-[v IO_ResetPin@mask mask `uc  1 a 1 88 ]
-[s S2422 . 4 `uc 1 address 1 0 `uc 1 ioConfig 1 1 `uc 1 outImage 1 2 `uc 1 inImage 1 3 ]
+[v IO_ResetPin@mask mask `uc  1 a 1 45 ]
+[s S2416 . 4 `uc 1 address 1 0 `uc 1 ioConfig 1 1 `uc 1 outImage 1 2 `uc 1 inImage 1 3 ]
 "42
-[v IO_ResetPin@ioStruct ioStruct `*.39S2422  1 p 2 10 ]
-[v IO_ResetPin@pin pin `uc  1 p 1 12 ]
+[v IO_ResetPin@ioStruct ioStruct `*.30S2416  1 p 1 41 ]
+[v IO_ResetPin@pin pin `uc  1 p 1 42 ]
 "54
 } 0
-"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\printf.c
+"5 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
 {
 "8
-[v printf@ap ap `[1]*.39v  1 a 2 86 ]
+[v printf@ap ap `[1]*.30v  1 a 1 40 ]
 "5
-[v printf@fmt fmt `*.32Cuc  1 p 2 6 ]
+[v printf@fmt fmt `*.32Cuc  1 p 2 34 ]
 "13
 } 0
-"1520 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\doprnt.c
+"1817 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
-"1523
-[v vfprintf@cfmt cfmt `*.32uc  1 a 2 84 ]
-[s S3342 _IO_FILE 0 ]
-"1520
-[v vfprintf@fp fp `*.2S3342  1 p 2 0 ]
-[v vfprintf@fmt fmt `*.32Cuc  1 p 2 2 ]
-[v vfprintf@ap ap `*.39*.39v  1 p 2 4 ]
-"1543
+"1820
+[v vfprintf@cfmt cfmt `*.32uc  1 a 2 32 ]
+[s S3376 _IO_FILE 0 ]
+"1817
+[v vfprintf@fp fp `*.39S3376  1 p 2 27 ]
+[v vfprintf@fmt fmt `*.32Cuc  1 p 2 29 ]
+[v vfprintf@ap ap `*.30*.30v  1 p 1 31 ]
+"1840
 } 0
-"1007
+"1177
 [v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
 {
-[u S3360 . 8 `o 1 ll 8 0 `uo 1 llu 8 0 `*.2v 1 vp 3 0 `d 1 f 4 0 ]
-"1016
-[v vfpfcnvrt@convarg convarg `S3360  1 a 8 74 ]
-"1009
-[v vfpfcnvrt@cp cp `*.32uc  1 a 2 82 ]
-[s S3342 _IO_FILE 0 ]
-"1007
-[v vfpfcnvrt@fp fp `*.2S3342  1 p 2 66 ]
-[v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 68 ]
-[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 70 ]
-"1517
+[u S3389 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
+"1188
+[v vfpfcnvrt@convarg convarg `S3389  1 a 4 22 ]
+"1179
+[v vfpfcnvrt@cp cp `*.32uc  1 a 2 20 ]
+[v vfpfcnvrt@c c `uc  1 a 1 26 ]
+"1180
+[v vfpfcnvrt@done done `a  1 a 1 19 ]
+[s S3376 _IO_FILE 0 ]
+"1177
+[v vfpfcnvrt@fp fp `*.39S3376  1 p 2 13 ]
+[v vfpfcnvrt@fmt fmt `*.30*.32uc  1 p 1 15 ]
+[v vfpfcnvrt@ap ap `*.30*.30v  1 p 1 16 ]
+"1814
 } 0
-"443
-[v _dtoa dtoa `(v  1 s 1 dtoa ]
-{
-"447
-[v dtoa@n n `o  1 a 8 55 ]
-"446
-[v dtoa@i i `i  1 a 2 63 ]
-[v dtoa@w w `i  1 a 2 53 ]
-[v dtoa@p p `i  1 a 2 51 ]
-"445
-[v dtoa@s s `uc  1 a 1 65 ]
-[s S3342 _IO_FILE 0 ]
-"443
-[v dtoa@fp fp `*.2S3342  1 p 2 31 ]
-[v dtoa@d d `o  1 p 8 33 ]
-"502
-} 0
-"133
-[v _pad pad `(v  1 s 1 pad ]
-{
-"135
-[v pad@w w `i  1 a 2 29 ]
-[v pad@i i `i  1 a 2 27 ]
-[s S3342 _IO_FILE 0 ]
-"133
-[v pad@fp fp `*.2S3342  1 p 2 20 ]
-[v pad@buf buf `*.39uc  1 p 2 22 ]
-[v pad@p p `i  1 p 2 24 ]
-"164
-} 0
-"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_fputs.c
-[v _fputs fputs `(i  1 e 2 0 ]
-{
-"11
-[v fputs@i i `i  1 a 2 18 ]
-"10
-[v fputs@c c `uc  1 a 1 17 ]
-"8
-[v fputs@s s `*.39Cuc  1 p 2 13 ]
-[u S3321 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S3324 _IO_FILE 11 `S3321 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputs@fp fp `*.2S3324  1 p 2 15 ]
-"19
-} 0
-"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_fputc.c
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 4 ]
-[u S3321 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S3324 _IO_FILE 11 `S3321 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputc@fp fp `*.2S3324  1 p 2 6 ]
+[u S3355 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S3358 _IO_FILE 12 `S3355 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputc@fp fp `*.39S3358  1 p 2 6 ]
 "24
 } 0
-"184 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/uart2.c
+"184 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/uart2.c
 [v _putch putch `(v  1 e 1 0 ]
 {
 [v putch@txData txData `uc  1 a 1 wreg ]
@@ -1474,68 +1550,60 @@ IO_REG_CONFIG 3
 [v UART2_Write@txData txData `uc  1 a 1 2 ]
 "177
 } 0
-"1 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\abs.c
+"1 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\abs.c
 [v _abs abs `(i  1 e 2 0 ]
 {
-[v abs@a a `i  1 p 2 20 ]
+[v abs@a a `i  1 p 2 8 ]
 "4
 } 0
-"9 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
-[v ___aomod __aomod `(o  1 e 8 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
 {
-"12
-[v ___aomod@sign sign `uc  1 a 1 19 ]
-[v ___aomod@counter counter `uc  1 a 1 18 ]
-"9
-[v ___aomod@dividend dividend `o  1 p 8 2 ]
-[v ___aomod@divisor divisor `o  1 p 8 10 ]
-"36
+"10
+[v ___awmod@sign sign `uc  1 a 1 7 ]
+[v ___awmod@counter counter `uc  1 a 1 6 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+[v ___awmod@divisor divisor `i  1 p 2 4 ]
+"34
 } 0
-"9 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
-[v ___aodiv __aodiv `(o  1 e 8 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
-"12
-[v ___aodiv@quotient quotient `o  1 a 8 20 ]
-"13
-[v ___aodiv@sign sign `uc  1 a 1 19 ]
-[v ___aodiv@counter counter `uc  1 a 1 18 ]
-"9
-[v ___aodiv@dividend dividend `o  1 p 8 2 ]
-[v ___aodiv@divisor divisor `o  1 p 8 10 ]
-"43
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 8 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 7 ]
+[v ___awdiv@counter counter `uc  1 a 1 6 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+[v ___awdiv@divisor divisor `i  1 p 2 4 ]
+"41
 } 0
-"11 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\header_files/tca9534.c
-[v _IO_ConfigPorts IO_ConfigPorts `(v  1 e 1 0 ]
-{
-[s S2422 . 4 `uc 1 address 1 0 `uc 1 ioConfig 1 1 `uc 1 outImage 1 2 `uc 1 inImage 1 3 ]
-[v IO_ConfigPorts@ioStruct ioStruct `*.39S2422  1 p 2 26 ]
-[v IO_ConfigPorts@port port `uc  1 p 1 28 ]
-"20
-} 0
-"99 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/examples/i2c1_master_example.c
+"99 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/examples/i2c1_master_example.c
 [v _I2C1_Write1ByteRegister I2C1_Write1ByteRegister `(v  1 e 1 0 ]
 {
 [v I2C1_Write1ByteRegister@address address `uc  1 a 1 wreg ]
 [v I2C1_Write1ByteRegister@address address `uc  1 a 1 wreg ]
-[v I2C1_Write1ByteRegister@reg reg `uc  1 p 1 23 ]
-[v I2C1_Write1ByteRegister@data data `uc  1 p 1 24 ]
+[v I2C1_Write1ByteRegister@reg reg `uc  1 p 1 24 ]
+[v I2C1_Write1ByteRegister@data data `uc  1 p 1 25 ]
 "101
-[v I2C1_Write1ByteRegister@address address `uc  1 a 1 25 ]
+[v I2C1_Write1ByteRegister@address address `uc  1 a 1 26 ]
 "111
 } 0
-"313 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/i2c1_master.c
+"313 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/i2c1_master.c
 [v _I2C1_SetAddressNackCallback I2C1_SetAddressNackCallback `(v  1 e 1 0 ]
 {
-[v I2C1_SetAddressNackCallback@cb cb `*.37(E360  1 p 2 7 ]
-[v I2C1_SetAddressNackCallback@ptr ptr `*.2v  1 p 2 9 ]
+[v I2C1_SetAddressNackCallback@cb cb `*.37(E363  1 p 2 7 ]
+[v I2C1_SetAddressNackCallback@ptr ptr `*.39v  1 p 2 9 ]
 "316
 } 0
 "204
-[v _I2C1_Open I2C1_Open `(E355  1 e 1 0 ]
+[v _I2C1_Open I2C1_Open `(E358  1 e 1 0 ]
 {
 [v I2C1_Open@address address `uc  1 a 1 wreg ]
 "206
-[v I2C1_Open@returnValue returnValue `E355  1 a 1 3 ]
+[v I2C1_Open@returnValue returnValue `E358  1 a 1 3 ]
 "204
 [v I2C1_Open@address address `uc  1 a 1 wreg ]
 "206
@@ -1548,20 +1616,20 @@ IO_REG_CONFIG 3
 "649
 } 0
 "281
-[v _I2C1_MasterWrite I2C1_MasterWrite `(E355  1 e 1 0 ]
+[v _I2C1_MasterWrite I2C1_MasterWrite `(E358  1 e 1 0 ]
 {
 "284
 } 0
 "252
-[v _I2C1_MasterOperation I2C1_MasterOperation `(E355  1 e 1 0 ]
+[v _I2C1_MasterOperation I2C1_MasterOperation `(E358  1 e 1 0 ]
 {
 [v I2C1_MasterOperation@read read `a  1 a 1 wreg ]
 "254
-[v I2C1_MasterOperation@returnValue returnValue `E355  1 a 1 22 ]
+[v I2C1_MasterOperation@returnValue returnValue `E358  1 a 1 23 ]
 "252
 [v I2C1_MasterOperation@read read `a  1 a 1 wreg ]
 "254
-[v I2C1_MasterOperation@read read `a  1 a 1 21 ]
+[v I2C1_MasterOperation@read read `a  1 a 1 22 ]
 "274
 } 0
 "342
@@ -1580,103 +1648,103 @@ IO_REG_CONFIG 3
 "360
 } 0
 "595
-[v _I2C1_DO_BUS_ERROR I2C1_DO_BUS_ERROR `(E22964  1 s 1 I2C1_DO_BUS_ERROR ]
+[v _I2C1_DO_BUS_ERROR I2C1_DO_BUS_ERROR `(E22977  1 s 1 I2C1_DO_BUS_ERROR ]
 {
 "601
 } 0
 "579
-[v _I2C1_DO_BUS_COLLISION I2C1_DO_BUS_COLLISION `(E22964  1 s 1 I2C1_DO_BUS_COLLISION ]
+[v _I2C1_DO_BUS_COLLISION I2C1_DO_BUS_COLLISION `(E22977  1 s 1 I2C1_DO_BUS_COLLISION ]
 {
 "593
 } 0
 "564
-[v _I2C1_DO_ADDRESS_NACK I2C1_DO_ADDRESS_NACK `(E22964  1 s 1 I2C1_DO_ADDRESS_NACK ]
+[v _I2C1_DO_ADDRESS_NACK I2C1_DO_ADDRESS_NACK `(E22977  1 s 1 I2C1_DO_ADDRESS_NACK ]
 {
 "577
 } 0
 "557
-[v _I2C1_DO_RESET I2C1_DO_RESET `(E22964  1 s 1 I2C1_DO_RESET ]
+[v _I2C1_DO_RESET I2C1_DO_RESET `(E22977  1 s 1 I2C1_DO_RESET ]
 {
 "563
 } 0
 "551
-[v _I2C1_DO_RX_NACK_RESTART I2C1_DO_RX_NACK_RESTART `(E22964  1 s 1 I2C1_DO_RX_NACK_RESTART ]
+[v _I2C1_DO_RX_NACK_RESTART I2C1_DO_RX_NACK_RESTART `(E22977  1 s 1 I2C1_DO_RX_NACK_RESTART ]
 {
 "555
 } 0
 "544
-[v _I2C1_DO_RX_NACK_STOP I2C1_DO_RX_NACK_STOP `(E22964  1 s 1 I2C1_DO_RX_NACK_STOP ]
+[v _I2C1_DO_RX_NACK_STOP I2C1_DO_RX_NACK_STOP `(E22977  1 s 1 I2C1_DO_RX_NACK_STOP ]
 {
 "549
 } 0
 "532
-[v _I2C1_DO_RX_ACK I2C1_DO_RX_ACK `(E22964  1 s 1 I2C1_DO_RX_ACK ]
+[v _I2C1_DO_RX_ACK I2C1_DO_RX_ACK `(E22977  1 s 1 I2C1_DO_RX_ACK ]
 {
 "536
 } 0
 "521
-[v _I2C1_DO_SEND_STOP I2C1_DO_SEND_STOP `(E22964  1 s 1 I2C1_DO_SEND_STOP ]
+[v _I2C1_DO_SEND_STOP I2C1_DO_SEND_STOP `(E22977  1 s 1 I2C1_DO_SEND_STOP ]
 {
 "530
 } 0
 "516
-[v _I2C1_DO_SEND_RESTART I2C1_DO_SEND_RESTART `(E22964  1 s 1 I2C1_DO_SEND_RESTART ]
+[v _I2C1_DO_SEND_RESTART I2C1_DO_SEND_RESTART `(E22977  1 s 1 I2C1_DO_SEND_RESTART ]
 {
 "519
 } 0
 "510
-[v _I2C1_DO_SEND_RESTART_WRITE I2C1_DO_SEND_RESTART_WRITE `(E22964  1 s 1 I2C1_DO_SEND_RESTART_WRITE ]
+[v _I2C1_DO_SEND_RESTART_WRITE I2C1_DO_SEND_RESTART_WRITE `(E22977  1 s 1 I2C1_DO_SEND_RESTART_WRITE ]
 {
 "513
 } 0
 "504
-[v _I2C1_DO_SEND_RESTART_READ I2C1_DO_SEND_RESTART_READ `(E22964  1 s 1 I2C1_DO_SEND_RESTART_READ ]
+[v _I2C1_DO_SEND_RESTART_READ I2C1_DO_SEND_RESTART_READ `(E22977  1 s 1 I2C1_DO_SEND_RESTART_READ ]
 {
 "508
 } 0
 "479
-[v _I2C1_DO_RX_EMPTY I2C1_DO_RX_EMPTY `(E22964  1 s 1 I2C1_DO_RX_EMPTY ]
+[v _I2C1_DO_RX_EMPTY I2C1_DO_RX_EMPTY `(E22977  1 s 1 I2C1_DO_RX_EMPTY ]
 {
 "502
 } 0
 "460
-[v _I2C1_DO_TX_EMPTY I2C1_DO_TX_EMPTY `(E22964  1 s 1 I2C1_DO_TX_EMPTY ]
+[v _I2C1_DO_TX_EMPTY I2C1_DO_TX_EMPTY `(E22977  1 s 1 I2C1_DO_TX_EMPTY ]
 {
 "477
 } 0
 "436
-[v _I2C1_DO_RX I2C1_DO_RX `(E22964  1 s 1 I2C1_DO_RX ]
+[v _I2C1_DO_RX I2C1_DO_RX `(E22977  1 s 1 I2C1_DO_RX ]
 {
 "454
-[v I2C1_DO_RX@retFsmState retFsmState `E22964  1 a 1 17 ]
+[v I2C1_DO_RX@retFsmState retFsmState `E22977  1 a 1 18 ]
 "458
 } 0
 "403
-[v _I2C1_DO_TX I2C1_DO_TX `(E22964  1 s 1 I2C1_DO_TX ]
+[v _I2C1_DO_TX I2C1_DO_TX `(E22977  1 s 1 I2C1_DO_TX ]
 {
 "426
-[v I2C1_DO_TX@retFsmState retFsmState `E22964  1 a 1 18 ]
+[v I2C1_DO_TX@retFsmState retFsmState `E22977  1 a 1 19 ]
 "425
-[v I2C1_DO_TX@dataTx dataTx `uc  1 a 1 17 ]
+[v I2C1_DO_TX@dataTx dataTx `uc  1 a 1 18 ]
 "434
 } 0
 "396
-[v _I2C1_DO_SEND_ADR_WRITE I2C1_DO_SEND_ADR_WRITE `(E22964  1 s 1 I2C1_DO_SEND_ADR_WRITE ]
+[v _I2C1_DO_SEND_ADR_WRITE I2C1_DO_SEND_ADR_WRITE `(E22977  1 s 1 I2C1_DO_SEND_ADR_WRITE ]
 {
 "401
 } 0
 "385
-[v _I2C1_DO_SEND_ADR_READ I2C1_DO_SEND_ADR_READ `(E22964  1 s 1 I2C1_DO_SEND_ADR_READ ]
+[v _I2C1_DO_SEND_ADR_READ I2C1_DO_SEND_ADR_READ `(E22977  1 s 1 I2C1_DO_SEND_ADR_READ ]
 {
 "394
 } 0
 "378
-[v _I2C1_DO_IDLE I2C1_DO_IDLE `(E22964  1 s 1 I2C1_DO_IDLE ]
+[v _I2C1_DO_IDLE I2C1_DO_IDLE `(E22977  1 s 1 I2C1_DO_IDLE ]
 {
 "383
 } 0
 "538
-[v _I2C1_DO_TX_ACK I2C1_DO_TX_ACK `(E22964  1 s 1 I2C1_DO_TX_ACK ]
+[v _I2C1_DO_TX_ACK I2C1_DO_TX_ACK `(E22977  1 s 1 I2C1_DO_TX_ACK ]
 {
 "542
 } 0
@@ -1754,62 +1822,62 @@ IO_REG_CONFIG 3
 "689
 } 0
 "614
-[v _I2C1_CallbackReturnReset I2C1_CallbackReturnReset `(E360  1 e 1 0 ]
+[v _I2C1_CallbackReturnReset I2C1_CallbackReturnReset `(E363  1 e 1 0 ]
 {
 [v I2C1_CallbackReturnReset@funPtr funPtr `*.39v  1 p 2 11 ]
 "617
 } 0
 "609
-[v _I2C1_CallbackReturnStop I2C1_CallbackReturnStop `(E360  1 e 1 0 ]
+[v _I2C1_CallbackReturnStop I2C1_CallbackReturnStop `(E363  1 e 1 0 ]
 {
 "612
 } 0
-"198 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/examples/i2c1_master_example.c
-[v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
+"198 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/examples/i2c1_master_example.c
+[v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E363  1 s 1 rdBlkRegCompleteHandler ]
 {
 [v rdBlkRegCompleteHandler@ptr ptr `*.39v  1 p 2 11 ]
 "203
 } 0
 "184
-[v _wr1RegCompleteHandler wr1RegCompleteHandler `(E360  1 s 1 wr1RegCompleteHandler ]
+[v _wr1RegCompleteHandler wr1RegCompleteHandler `(E363  1 s 1 wr1RegCompleteHandler ]
 {
 [v wr1RegCompleteHandler@ptr ptr `*.39v  1 p 2 11 ]
 "189
 } 0
 "177
-[v _rd2RegCompleteHandler rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
+[v _rd2RegCompleteHandler rd2RegCompleteHandler `(E363  1 s 1 rd2RegCompleteHandler ]
 {
 [v rd2RegCompleteHandler@ptr ptr `*.39v  1 p 2 11 ]
 "182
 } 0
 "170
-[v _rd1RegCompleteHandler rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
+[v _rd1RegCompleteHandler rd1RegCompleteHandler `(E363  1 s 1 rd1RegCompleteHandler ]
 {
 [v rd1RegCompleteHandler@ptr ptr `*.39v  1 p 2 11 ]
 "175
 } 0
 "191
-[v _wr2RegCompleteHandler wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
+[v _wr2RegCompleteHandler wr2RegCompleteHandler `(E363  1 s 1 wr2RegCompleteHandler ]
 {
 [v wr2RegCompleteHandler@ptr ptr `*.39v  1 p 2 11 ]
 "196
 } 0
-"303 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/i2c1_master.c
+"303 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/i2c1_master.c
 [v _I2C1_SetDataCompleteCallback I2C1_SetDataCompleteCallback `(v  1 e 1 0 ]
 {
-[v I2C1_SetDataCompleteCallback@cb cb `*.37(E360  1 p 2 7 ]
+[v I2C1_SetDataCompleteCallback@cb cb `*.37(E363  1 p 2 7 ]
 [v I2C1_SetDataCompleteCallback@ptr ptr `*.39v  1 p 2 9 ]
 "306
 } 0
 "328
 [v _I2C1_SetCallback I2C1_SetCallback `(v  1 s 1 I2C1_SetCallback ]
 {
-[v I2C1_SetCallback@idx idx `E22985  1 a 1 wreg ]
-[v I2C1_SetCallback@idx idx `E22985  1 a 1 wreg ]
-[v I2C1_SetCallback@cb cb `*.37(E360  1 p 2 2 ]
+[v I2C1_SetCallback@idx idx `E22998  1 a 1 wreg ]
+[v I2C1_SetCallback@idx idx `E22998  1 a 1 wreg ]
+[v I2C1_SetCallback@cb cb `*.37(E363  1 p 2 2 ]
 [v I2C1_SetCallback@ptr ptr `*.39v  1 p 2 4 ]
 "330
-[v I2C1_SetCallback@idx idx `E22985  1 a 1 6 ]
+[v I2C1_SetCallback@idx idx `E22998  1 a 1 6 ]
 "340
 } 0
 "293
@@ -1855,10 +1923,10 @@ IO_REG_CONFIG 3
 "764
 } 0
 "237
-[v _I2C1_Close I2C1_Close `(E355  1 e 1 0 ]
+[v _I2C1_Close I2C1_Close `(E358  1 e 1 0 ]
 {
 "239
-[v I2C1_Close@returnValue returnValue `E355  1 a 1 2 ]
+[v I2C1_Close@returnValue returnValue `E358  1 a 1 2 ]
 "250
 } 0
 "788
@@ -1876,74 +1944,12 @@ IO_REG_CONFIG 3
 {
 "807
 } 0
-"282 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\main.c
-[v _control_wdt control_wdt `(v  1 e 1 0 ]
-{
-"284
-[v control_wdt@last_flag last_flag `a  1 s 1 last_flag ]
-"296
-} 0
-"148
-[v _control_system control_system `(v  1 e 1 0 ]
-{
-"150
-[v control_system@state_machine state_machine `uc  1 s 1 state_machine ]
-"159
-[v control_system@counter counter `us  1 s 2 counter ]
-"280
-} 0
-"328
-[v _fx_read_adc fx_read_adc `(v  1 e 1 0 ]
-{
-"333
-[v fx_read_adc@i i `uc  1 a 1 13 ]
-"331
-[v fx_read_adc@adc_2 adc_2 `us  1 a 2 11 ]
-"330
-[v fx_read_adc@adc_1 adc_1 `us  1 a 2 9 ]
-"341
-} 0
-"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-{
-"10
-[v ___lwdiv@quotient quotient `ui  1 a 2 6 ]
-"11
-[v ___lwdiv@counter counter `uc  1 a 1 8 ]
-"7
-[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
-[v ___lwdiv@divisor divisor `ui  1 p 2 4 ]
-"30
-} 0
-"137 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/adcc.c
-[v _ADCC_GetSingleConversion ADCC_GetSingleConversion `(us  1 e 2 0 ]
-{
-[v ADCC_GetSingleConversion@channel channel `E22576  1 a 1 wreg ]
-[v ADCC_GetSingleConversion@channel channel `E22576  1 a 1 wreg ]
-"140
-[v ADCC_GetSingleConversion@channel channel `E22576  1 a 1 6 ]
-"160
-} 0
-"354 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\main.c
-[v _fx_led_green_slow fx_led_green_slow `(v  1 e 1 0 ]
-{
-"356
-[v fx_led_green_slow@flag_led flag_led `a  1 s 1 flag_led ]
-"363
-} 0
-"343
-[v _fx_led_green_fast fx_led_green_fast `(v  1 e 1 0 ]
-{
-"345
-[v fx_led_green_fast@flag_led flag_led `a  1 s 1 flag_led ]
-"352
-} 0
-"50 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/mcc.c
+"50 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "61
 } 0
-"66 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/uart2.c
+"66 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/uart2.c
 [v _UART2_Initialize UART2_Initialize `(v  1 e 1 0 ]
 {
 "124
@@ -1966,12 +1972,12 @@ IO_REG_CONFIG 3
 [v UART2_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 2 ]
 "210
 } 0
-"62 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/tmr2.c
+"62 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 {
 "86
 } 0
-"72 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/tmr0.c
+"72 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 {
 "99
@@ -1982,42 +1988,42 @@ IO_REG_CONFIG 3
 [v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
 "178
 } 0
-"77 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/mcc.c
+"77 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/mcc.c
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 {
 "95
 } 0
-"55 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/pin_manager.c
+"55 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "121
 } 0
-"63 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/mcc.c
+"63 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "75
 } 0
-"52 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
 "56
 } 0
-"183 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/i2c1_master.c
+"183 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/i2c1_master.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
 {
 "202
 } 0
-"62 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/adcc.c
+"62 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
 {
 "111
 } 0
-"58 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/interrupt_manager.c
+"58 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
 {
 "69
 } 0
-"140 C:\Users\Fernando.Fernandes\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/tmr0.c
+"140 C:\Users\Fernando\Documents\GitHub\bete_travabici_teste_recarga\mcc_generated_files/tmr0.c
 [v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
 {
 "142

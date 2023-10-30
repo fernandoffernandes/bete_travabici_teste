@@ -220,6 +220,14 @@ enum TestState_Table
     
     ENUM_STAGE_SUCESS,
     ENUM_STAGE_FAIL,
+    ENUM_STAGE_WAIT_BT,
+};
+
+enum Fail_Table
+{
+    ENUM_FAIL_FRAME_CONNECTION = 2,
+    ENUM_FAIL_SHORT_FRAME,
+    ENUM_FAIL_HIGH_VOLTAGE,
 };
 
 enum LockCommand_Table
