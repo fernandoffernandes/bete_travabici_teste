@@ -211,18 +211,38 @@ void control_system(void)
             {
                 fx_read_adc();                
                 
-                if((g_adc_1 > MIN_VOLTAGE_OPEN_CIRCUIT) && 
-                   (g_adc_2 > MIN_VOLTAGE_OPEN_CIRCUIT))
+                // OVER VOLTAGE
+                if((g_adc_1 > MAX_VOLTAGE_OPEN_CIRCUIT) && 
+                   (g_adc_2 > MAX_VOLTAGE_OPEN_CIRCUIT))
                 {
-                    printf("Short circuit not detected \r\n");
-                    g_state_machine++;                    
+                    printf("OVER VOLTAGE DETECTED \r\n");
+                    
+                    g_fail_code = ENUM_FAIL_OVER_VOLTAGE;
+                    g_state_machine = ENUM_STAGE_FAIL;                    
                 }
-                else
+                // SHORT WITH FRAME                
+                if((g_adc_1 < MIN_VOLTAGE_OPEN_CIRCUIT) && 
+                   (g_adc_2 < MIN_VOLTAGE_OPEN_CIRCUIT))
                 {
                     printf("Short circuit with frame detected \r\n");
                     
                     g_fail_code = ENUM_FAIL_SHORT_FRAME;
-                    g_state_machine = ENUM_STAGE_FAIL;                    
+                    g_state_machine = ENUM_STAGE_FAIL;                   
+                }
+                // OPEN CIRCUIT 
+                if((g_adc_1 < MIN_VOLTAGE_OPEN_CIRCUIT) || 
+                   (g_adc_2 < MIN_VOLTAGE_OPEN_CIRCUIT))
+                {
+                    printf("Open circuit detected \r\n");
+                    
+                    g_fail_code = ENUM_FAIL_CIRCUIT_OPEN;
+                    g_state_machine = ENUM_STAGE_FAIL;                   
+                }                
+                // OK
+                else
+                {                                       
+                    printf("Short circuit not detected \r\n");
+                    g_state_machine++;  
                 }                
             }            
         }
@@ -258,7 +278,7 @@ void control_system(void)
                 {
                     printf("Contact voltage high detected \r\n");
                     
-                    g_fail_code = ENUM_FAIL_HIGH_VOLTAGE;
+                    g_fail_code = ENUM_FAIL_DROP_VOLTAGE;
                     g_state_machine = ENUM_STAGE_FAIL;
                 }                
             }     
@@ -442,8 +462,8 @@ void fx_led_green_slow(void)
 void fx_led_show_fail(uint8_t fail_code)
 {
     // DEFINES /////////////////////////////////////////////////////////////////
-    #define TIME_FAIL_LED_ON        10         //*100ms   
-    #define TIME_FAIL_LED_OFF       10         //*100ms
+    #define TIME_FAIL_LED_ON        5          //*100ms   
+    #define TIME_FAIL_LED_OFF       5          //*100ms
     #define TIME_FAIL_NEXT_CODE     30         //*100ms 
     
     // VARIABLES ///////////////////////////////////////////////////////////////    

@@ -48,10 +48,9 @@ extern "C" {
 // GENERAL /////////////////////////////////////////////////////////////////////
 #define ADC_SAMPLES                         10
     
-#define MAX_VOLTAGE_CLOSE_CIRCUIT           100
-#define MIN_VOLTAGE_OPEN_CIRCUIT            4000 
-    
-
+#define MAX_VOLTAGE_CLOSE_CIRCUIT           500
+#define MAX_VOLTAGE_OPEN_CIRCUIT            3900
+#define MIN_VOLTAGE_OPEN_CIRCUIT            2900
 
 // STRUCTS ///////////////////////////////////////////////////////////////////// 
     
@@ -227,7 +226,9 @@ enum Fail_Table
 {
     ENUM_FAIL_FRAME_CONNECTION = 2,
     ENUM_FAIL_SHORT_FRAME,
-    ENUM_FAIL_HIGH_VOLTAGE,
+    ENUM_FAIL_CIRCUIT_OPEN,
+    ENUM_FAIL_DROP_VOLTAGE,
+    ENUM_FAIL_OVER_VOLTAGE,
 };
 
 enum LockCommand_Table
